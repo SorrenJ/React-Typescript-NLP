@@ -2,9 +2,19 @@ const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
 app.use(cors());
+const OpenAI = require('openai');
+
+
+app.use(cors()); // Enable CORS for frontend communication
+app.use(express.json()); // For parsing JSON payloads
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY, // Use environment variable for security
+});
 
 // Load corpus data from local JSON file
 const corpusPath = path.join(__dirname, 'corpus.json');
@@ -61,7 +71,28 @@ app.post('/api/learn', express.json(), (req, res) => {
   }
 });
 
+// Endpoint to handle keyword extraction
+app.post('/api/extract-keywords', async (req, res) => {
+  const { input } = req.body;
 
+  try {
+    const prompt = `Extract keywords from the following text: "${input}". Return only keywords as a comma-separated list.`;
+    const response = await openai.chat.completions.create({
+      model: 'gpt-3.5-turbo',
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 60,
+      temperature: 0.3,
+    });
+
+    const content = response.choices?.[0]?.message?.content?.trim();
+    const keywords = content ? content.split(',').map(keyword => keyword.trim()) : [];
+
+    res.json({ keywords });
+  } catch (error) {
+    console.error("Error extracting keywords:", error);
+    res.status(500).json({ error: "Failed to extract keywords" });
+  }
+});
 
 
 

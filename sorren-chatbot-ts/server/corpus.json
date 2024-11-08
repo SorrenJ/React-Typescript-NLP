@@ -29,10 +29,15 @@
   {
     "keywords": [
       "virtual pet",
-      "pet app",
-      "virtual pet game",
+      "pet",
+      "app",
+      "game",
       "tone detection",
-      "sentiment analysis"
+      "tone",
+      "detection",
+      "sentiment analysis",
+      "sentiment",
+      "analysis"
     ],
     "responses": [
       "The Virtual Pet Web Application lets users interact with a pet by feeding, cleaning, and training it. It even detects your tone using sentiment analysis, creating a responsive experience.",
@@ -43,8 +48,12 @@
   {
     "keywords": [
       "map app",
+      "map",
+      "app",
       "collaborative maps",
-      "map listing",
+      "collaborative",
+      "maps",
+      "listing",
       "Leaflet",
       "points"
     ],
@@ -57,9 +66,11 @@
   {
     "keywords": [
       "sleep chatbot",
-      "sleep wellness",
+      "sleep",
+      "wellness",
       "chatbot",
-      "sleep assistant"
+      "sleep assistant",
+      "assistant"
     ],
     "responses": [
       "The Sleep Wellness Chatbot is designed to assist users with sleep-related guidance through a chat interface.",
@@ -70,10 +81,13 @@
   {
     "keywords": [
       "facemask detection",
-      "mask detection",
+      "facemask",
+      "mask",
+      "detection",
       "YOLO",
       "COVID-19",
-      "mask app"
+      "mask app",
+      "app"
     ],
     "responses": [
       "The Facemask Detection App was created during COVID-19 to detect if someone is wearing a mask using their phone’s camera.",
@@ -84,9 +98,16 @@
   {
     "keywords": [
       "student webpage creator",
+      "student",
+      "webpage",
+      "creator",
       "profile generator",
+      "profile",
+      "generator",
       "dynamic profile",
+      "dynamic",
       "single-page app",
+      "single-page",
       "SFU"
     ],
     "responses": [
@@ -98,10 +119,15 @@
   {
     "keywords": [
       "travel app",
-      "travel prototype",
+      "travel",
+      "prototype",
       "Figma prototype",
+      "Figma",
       "user testing",
-      "UX research"
+      "testing",
+      "UX research",
+      "UX",
+      "research"
     ],
     "responses": [
       "The Travel App Figma Prototype was designed to address user pain points in the travel experience. We conducted user testing, interviews, and usability tests to understand and address these needs.",
@@ -112,8 +138,11 @@
   {
     "keywords": [
       "bakery website",
-      "website redesign",
+      "bakery",
+      "website",
+      "redesign",
       "user experience",
+      "experience",
       "UX"
     ],
     "responses": [
@@ -125,9 +154,16 @@
   {
     "keywords": [
       "smart drive test",
+      "smart",
+      "drive",
+      "test",
       "driving platform",
+      "driving",
+      "platform",
       "learning platform",
-      "driving course website"
+      "learning",
+      "course",
+      "website"
     ],
     "responses": [
       "The Smart Drive Test project is a learning platform that teaches driving techniques. I improved its functionality and designed it to support new drivers’ learning.",
@@ -138,9 +174,14 @@
   {
     "keywords": [
       "City of Vancouver",
+      "City",
+      "Vancouver",
       "voting website",
+      "voting",
+      "website",
       "wireframes",
-      "city project"
+      "city project",
+      "project"
     ],
     "responses": [
       "For the City of Vancouver, I created wireframes for a voting website, focusing on information architecture and aligning with the city’s branding.",
@@ -151,9 +192,15 @@
   {
     "keywords": [
       "profile helper",
+      "profile",
+      "helper",
       "student profile",
+      "student",
       "Adobe Experience Manager",
-      "profile automation"
+      "Adobe",
+      "Experience",
+      "Manager",
+      "automation"
     ],
     "responses": [
       "The Profile Helper automated student profile creation at SFU, making it faster to complete profiles and streamline the workflow.",
@@ -164,9 +211,15 @@
   {
     "keywords": [
       "UX research",
+      "research",
       "user stories",
+      "stories",
       "usability testing",
-      "information architecture"
+      "usability",
+      "testing",
+      "information architecture",
+      "information",
+      "architecture"
     ],
     "responses": [
       "UX research is central to my projects. From interviews to usability testing, I focus on gathering insights to improve the user experience.",
@@ -180,7 +233,9 @@
       "projects",
       "deployment",
       "showcase",
-      "tech stack"
+      "tech stack",
+      "tech",
+      "stack"
     ],
     "responses": [
       "I’m constantly updating my portfolio to showcase my projects, including the Virtual Pet App and Map Listing App.",
@@ -192,8 +247,13 @@
     "keywords": [
       "name",
       "who are you",
+      "who",
+      "are",
+      "your",
+      "name",
       "what's your name",
-      "your name"
+      "what",
+      "is"
     ],
     "responses": [
       "You can call me Sorren.",
@@ -219,8 +279,14 @@
   {
     "keywords": [
       "what's up",
+      "what",
+      "up",
       "how are you",
+      "how",
+      "are",
+      "you",
       "how's it going",
+      "going",
       "what's going on"
     ],
     "responses": [
@@ -233,7 +299,11 @@
   {
     "keywords": [
       "what's your favorite thing to do",
-      "favorite activity",
+      "favorite",
+      "thing",
+      "to",
+      "do",
+      "activity",
       "fun",
       "enjoy"
     ],
@@ -249,8 +319,11 @@
   {
     "keywords": [
       "help with coding",
-      "need help with code",
-      "assist with programming",
+      "help",
+      "coding",
+      "code",
+      "assist",
+      "programming",
       "help me code"
     ],
     "responses": [
@@ -265,9 +338,18 @@
   {
     "keywords": [
       "tell me about yourself",
+      "tell",
+      "me",
+      "about",
+      "yourself",
       "who are you",
+      "who",
+      "are",
+      "you",
       "your background",
-      "what do you do"
+      "background",
+      "what do you do",
+      "do"
     ],
     "responses": [
       "I’m Sorren Jao, a web developer with a background in interactive design and virtual pet games.",
@@ -281,8 +363,15 @@
   {
     "keywords": [
       "how do you relax",
+      "how",
+      "do",
+      "relax",
       "free time",
+      "free",
+      "time",
       "when not coding",
+      "not",
+      "coding",
       "hobbies"
     ],
     "responses": [
@@ -296,8 +385,12 @@
   {
     "keywords": [
       "favorite project",
-      "project you're proud of",
-      "best project"
+      "favorite",
+      "project",
+      "you're proud of",
+      "proud",
+      "best project",
+      "best"
     ],
     "responses": [
       "One of my favorite projects is a virtual pet app that uses sentiment analysis to make pets respond to user tone.",
@@ -310,8 +403,12 @@
   {
     "keywords": [
       "favorite language",
+      "favorite",
+      "language",
       "programming language",
-      "coding language"
+      "programming",
+      "coding language",
+      "coding"
     ],
     "responses": [
       "I’d say JavaScript is my favorite—it’s so versatile and powers everything from frontend to backend.",
@@ -324,8 +421,16 @@
   {
     "keywords": [
       "tips for beginners",
+      "tips",
+      "beginners",
       "beginner coding tips",
-      "getting started with programming"
+      "beginner",
+      "coding",
+      "tips",
+      "getting started",
+      "getting",
+      "started",
+      "programming"
     ],
     "responses": [
       "Start with the basics and build a strong foundation—understanding fundamentals is key!",
@@ -339,8 +444,13 @@
     "keywords": [
       "goals",
       "future plans",
+      "future",
+      "plans",
       "next steps",
-      "future projects"
+      "next",
+      "steps",
+      "future projects",
+      "projects"
     ],
     "responses": [
       "I’d love to keep building interactive apps and dive deeper into AI integrations in future projects.",
@@ -353,8 +463,17 @@
   {
     "keywords": [
       "advice for coding",
+      "advice",
+      "for",
+      "coding",
       "best practices",
-      "how to get better at coding"
+      "best",
+      "practices",
+      "how to get better",
+      "how",
+      "to",
+      "get",
+      "better"
     ],
     "responses": [
       "Practice consistently. The more you code, the more natural it becomes!",
@@ -367,8 +486,12 @@
   {
     "keywords": [
       "favorite tools",
+      "favorite",
+      "tools",
       "coding tools",
-      "development tools"
+      "coding",
+      "development tools",
+      "development"
     ],
     "responses": [
       "VS Code is my go-to for coding—it’s lightweight but super powerful with all the extensions available.",
@@ -376,96 +499,6 @@
       "For version control, Git and GitHub are essential. They make collaboration and tracking changes seamless.",
       "I enjoy working with Docker too—it simplifies deploying applications by isolating them in containers.",
       "Figma is great for design and prototyping. It’s intuitive and a game-changer for UI/UX workflows."
-    ]
-  },
-  {
-    "keywords": [
-      "favorite thing about web development",
-      "best part of coding",
-      "enjoy about programming"
-    ],
-    "responses": [
-      "Creating something out of nothing is amazing. Seeing a project come together from just code is really rewarding.",
-      "I love the problem-solving aspect of coding. Every bug or issue is a new puzzle to figure out.",
-      "Bringing ideas to life and making interactive experiences is my favorite part.",
-      "The constant learning is exciting. There’s always a new tool or framework to explore.",
-      "I enjoy the collaboration aspect, working with others to build something greater than any of us could alone."
-    ]
-  },
-  {
-    "keywords": [
-      "what inspires you",
-      "inspiration",
-      "motivation"
-    ],
-    "responses": [
-      "Seeing projects that make a positive impact inspires me to keep improving my skills.",
-      "Learning about new technologies and their potential applications always keeps me motivated.",
-      "I’m inspired by people who create innovative, user-friendly applications that make a difference.",
-      "The endless possibilities in tech motivate me—there’s so much room to create and innovate.",
-      "Collaborating with other passionate developers is inspiring. It’s amazing what can be achieved together."
-    ]
-  },
-  {
-    "keywords": [
-      "coding resources",
-      "learning resources",
-      "best places to learn coding"
-    ],
-    "responses": [
-      "FreeCodeCamp and Codecademy are great places to get started with coding basics.",
-      "I’d recommend MDN Web Docs for JavaScript and web development—it’s comprehensive and up-to-date.",
-      "Udemy and Coursera offer great courses, especially if you’re looking for structure and certification.",
-      "If you’re into web development, Frontend Masters has amazing courses on everything frontend.",
-      "LeetCode and Codewars are awesome for practicing coding challenges and improving problem-solving skills."
-    ]
-  },
-  {
-    "keywords": [
-      "what do you think about AI",
-      "thoughts on AI",
-      "AI opinions"
-    ],
-    "responses": [
-      "AI is fascinating! It has huge potential, but it’s also important to be mindful of its ethical implications.",
-      "I think AI can really enhance user experiences when used responsibly and thoughtfully.",
-      "There’s so much potential for AI to assist in areas like healthcare, education, and personalized services.",
-      "I’m interested in seeing how AI evolves in interactive applications, especially in enhancing UX.",
-      "AI brings new possibilities, but transparency and ethical considerations are essential as it grows."
-    ]
-  },
-  {
-    "keywords": [
-      "default"
-    ],
-    "responses": [
-      "I’d be happy to talk about any of my projects! Let me know which one you’re interested in.",
-      "Feel free to ask about any project—whether it’s the tech stack, challenges, or what I learned from it.",
-      "I’ve worked on a variety of projects, from virtual pets to collaborative maps and UX research. Which one would you like to know more about?"
-    ]
-  },
-  {
-    "keywords": [
-      "my favaorite color isblue"
-    ],
-    "responses": [
-      "my favorite color is blue"
-    ]
-  },
-  {
-    "keywords": [
-      "what is my favorite color?"
-    ],
-    "responses": [
-      "What is my favorite color?"
-    ]
-  },
-  {
-    "keywords": [
-      "what is my favorite color?"
-    ],
-    "responses": [
-      "my favorite food is an apple"
     ]
   }
 ]
