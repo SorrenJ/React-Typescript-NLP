@@ -33,5 +33,32 @@ app.post('/api/corpus', express.json(), (req, res) => {
   res.status(201).json(newEntry);
 });
 
+
+
+
+// Endpoint to add a new learning entry from chatbot interactions
+app.post('/api/learn', express.json(), (req, res) => {
+  const { keywords, response } = req.body;
+
+  if (!keywords || !response) {
+    return res.status(400).json({ error: 'Keywords and response are required' });
+  }
+
+  // Create a new entry with the user-provided keywords and response
+  const newEntry = {
+    keywords,
+    responses: [response]
+  };
+
+  // Add the new entry to the corpus
+  corpus.push(newEntry);
+
+  // Update the local JSON file to save learning data
+  fs.writeFileSync(corpusPath, JSON.stringify(corpus, null, 2));
+  res.status(201).json(newEntry);
+});
+
+
+
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

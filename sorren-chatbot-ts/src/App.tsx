@@ -46,12 +46,31 @@ function SorrenChatbot() {
     const responseArray = foundKeyword ? foundKeyword.responses : corpus.find((entry) => entry.keywords.includes("default"))?.responses;
     return responseArray ? responseArray[Math.floor(Math.random() * responseArray.length)] : "I'm here to chat!";
   };
-
-  const handleUserMessage = () => {
+  const handleUserMessage = async () => {
     const tone = detectTone(userInput);
-    const response = `${getResponse(userInput)} (I sense a ${tone} tone)`;
-    setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: response }]);
+    const response = getResponse(userInput);
+    if (response) {
+      // If a response is found, respond as usual
+      setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: `${response} (I sense a ${tone} tone)` }]);
+    } else {
+      // If no response found, generate a fallback response and learn from the user input
+      const fallbackResponse = "I'm still learning! I'll remember this for next time.";
+      setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: fallbackResponse }]);
+
+      // Send the new learning data to the backend
+      try {
+        await axios.post('http://localhost:5000/api/learn', {
+          keywords: [userInput.toLowerCase()], // use the entire input as keywords for simplicity
+          response: fallbackResponse
+        });
+        console.log("New learning data saved.");
+      } catch (error) {
+        console.error("Error saving learning data:", error);
+      }
+    }
+
     setUserInput('');
+
   };
 
   return (
