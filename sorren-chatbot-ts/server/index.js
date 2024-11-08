@@ -36,27 +36,33 @@ app.post('/api/corpus', express.json(), (req, res) => {
 
 
 
-// Endpoint to add a new learning entry from chatbot interactions
 app.post('/api/learn', express.json(), (req, res) => {
   const { keywords, response } = req.body;
 
   if (!keywords || !response) {
+    console.log("Invalid data received:", req.body); // Log the received data
     return res.status(400).json({ error: 'Keywords and response are required' });
   }
 
-  // Create a new entry with the user-provided keywords and response
   const newEntry = {
     keywords,
     responses: [response]
   };
 
-  // Add the new entry to the corpus
   corpus.push(newEntry);
+  console.log("New entry added to corpus:", newEntry); // Log the new entry
 
-  // Update the local JSON file to save learning data
-  fs.writeFileSync(corpusPath, JSON.stringify(corpus, null, 2));
-  res.status(201).json(newEntry);
+  // Update the corpus.json file
+  try {
+    fs.writeFileSync(corpusPath, JSON.stringify(corpus, null, 2));
+    console.log("Corpus successfully updated in corpus.json"); // Log success
+    res.status(201).json(newEntry);
+  } catch (error) {
+    console.error("Error writing to corpus.json:", error); // Log any write errors
+    res.status(500).json({ error: 'Failed to update corpus file' });
+  }
 });
+
 
 
 
