@@ -61,7 +61,7 @@ app.post('/api/generate-response', async (req, res) => {
       const openaiResponse = await openai.chat.completions.create({
         model: 'gpt-3.5-turbo',
         messages: [{ role: 'user', content: prompt }],
-        max_tokens: 100,
+        max_tokens: 500,
         temperature: 0.7
       });
       responseText = openaiResponse.choices[0].message.content.trim();
