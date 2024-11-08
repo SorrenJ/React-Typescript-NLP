@@ -94,6 +94,49 @@ app.post('/api/extract-keywords', async (req, res) => {
   }
 });
 
+// Endpoint to handle conversation with OpenAI's model and custom corpus
+app.post('/api/generate-response', async (req, res) => {
+  const { input } = req.body;
+
+  // Custom corpus containing keywords and responses
+  const corpus = [
+    // Insert your expanded corpus data here
+  ];
+
+  // Search the corpus for matching keywords
+  const findInCorpus = (input) => {
+    const lowerInput = input.toLowerCase();
+    const foundEntry = corpus.find(entry =>
+      entry.keywords.some(keyword => lowerInput.includes(keyword))
+    );
+    return foundEntry ? foundEntry.responses[Math.floor(Math.random() * foundEntry.responses.length)] : null;
+  };
+
+  // First, check for a response in the custom corpus
+  let corpusResponse = findInCorpus(input);
+  if (corpusResponse) {
+    return res.json({ response: corpusResponse });
+  }
+
+  // If no response is found in the corpus, use OpenAI to generate one
+  try {
+    const openaiPrompt = `Respond conversationally to the following input: "${input}". Incorporate related details and maintain a friendly tone.`;
+    
+    const openaiResponse = await openai.chat.completions.create({
+      model: 'gpt-3.5-turbo',
+      messages: [{ role: 'user', content: openaiPrompt }],
+      max_tokens: 100,
+      temperature: 0.7,
+    });
+
+    const content = openaiResponse.choices?.[0]?.message?.content?.trim();
+    res.json({ response: content || "I'm here to chat! Feel free to ask me anything." });
+
+  } catch (error) {
+    console.error("Error generating response with OpenAI:", error);
+    res.status(500).json({ error: "Failed to generate a response" });
+  }
+});
 
 
 const PORT = 5000;
