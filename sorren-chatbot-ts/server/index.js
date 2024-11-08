@@ -8,8 +8,6 @@ const app = express();
 app.use(cors());
 const OpenAI = require('openai');
 
-
-app.use(cors()); // Enable CORS for frontend communication
 app.use(express.json()); // For parsing JSON payloads
 
 const openai = new OpenAI({
@@ -44,64 +42,9 @@ app.post('/api/corpus', express.json(), (req, res) => {
 });
 
 
-
-
-app.post('/api/learn', express.json(), (req, res) => {
-  const { keywords, response } = req.body;
-
-  if (!keywords || !response) {
-    return res.status(400).json({ error: 'Keywords and response are required' });
-  }
-
-  const newEntry = {
-    keywords,
-    responses: [response]
-  };
-
-  corpus.push(newEntry);
-
-  // Update the local JSON file to save learning data
-  try {
-    fs.writeFileSync(corpusPath, JSON.stringify(corpus, null, 2));
-    console.log("Corpus successfully updated in corpus.json");
-    res.status(201).json(newEntry);
-  } catch (error) {
-    console.error("Error writing to corpus.json:", error);
-    res.status(500).json({ error: 'Failed to update corpus file' });
-  }
-});
-
-// Endpoint to handle keyword extraction
-app.post('/api/extract-keywords', async (req, res) => {
-  const { input } = req.body;
-
-  try {
-    const prompt = `Extract keywords from the following text: "${input}". Return only keywords as a comma-separated list.`;
-    const response = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: prompt }],
-      max_tokens: 60,
-      temperature: 0.3,
-    });
-
-    const content = response.choices?.[0]?.message?.content?.trim();
-    const keywords = content ? content.split(',').map(keyword => keyword.trim()) : [];
-
-    res.json({ keywords });
-  } catch (error) {
-    console.error("Error extracting keywords:", error);
-    res.status(500).json({ error: "Failed to extract keywords" });
-  }
-});
-
 // Endpoint to handle conversation with OpenAI's model and custom corpus
 app.post('/api/generate-response', async (req, res) => {
   const { input } = req.body;
-
-  // Custom corpus containing keywords and responses
-  const corpus = [
-    // Insert your expanded corpus data here
-  ];
 
   // Search the corpus for matching keywords
   const findInCorpus = (input) => {
@@ -137,7 +80,6 @@ app.post('/api/generate-response', async (req, res) => {
     res.status(500).json({ error: "Failed to generate a response" });
   }
 });
-
 
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

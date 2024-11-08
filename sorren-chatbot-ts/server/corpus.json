@@ -1,504 +1,218 @@
 [
-  {
-    "keywords": [
-      "hello",
-      "hi",
-      "greetings",
-      "howdy"
-    ],
-    "responses": [
-      "Hey! What’s on your mind today?",
-      "Hello! Got any questions or ideas to chat about?",
-      "Hi there! Ready to dive into anything specific?"
-    ]
-  },
-  {
-    "keywords": [
-      "coding",
-      "debugging",
-      "project",
-      "technical"
-    ],
-    "responses": [
-      "Debugging can be a bit like detective work. Sometimes it’s all about patience and persistence.",
-      "Honestly, coding is a mix of art and science. I always try to focus on clean, readable code—it saves a ton of headaches later.",
-      "I’m all about incremental progress on projects. Small steps really do add up, especially when tackling complex problems.",
-      "Sometimes, I’ll take a break when I’m stuck and come back with a fresh perspective. It’s surprising how often that helps."
-    ]
-  },
-  {
-    "keywords": [
-      "virtual pet",
-      "pet",
-      "app",
-      "game",
-      "tone detection",
-      "tone",
-      "detection",
-      "sentiment analysis",
-      "sentiment",
-      "analysis"
-    ],
-    "responses": [
-      "The Virtual Pet Web Application lets users interact with a pet by feeding, cleaning, and training it. It even detects your tone using sentiment analysis, creating a responsive experience.",
-      "In this project, I used sentiment analysis to make the pet react to user input. It’s built with React, JavaScript, Express, and SQL, and it's hosted on AWS RDS.",
-      "This virtual pet app is all about making a fun, interactive experience where users can care for their pet. The pet’s responses are based on the tone you use, thanks to sentiment analysis."
-    ]
-  },
-  {
-    "keywords": [
-      "map app",
-      "map",
-      "app",
-      "collaborative maps",
-      "collaborative",
-      "maps",
-      "listing",
-      "Leaflet",
-      "points"
-    ],
-    "responses": [
-      "The Map Listing Web Application allows users to collaboratively create maps with multiple points of interest. It's great for organizing location-based info.",
-      "For this project, I used Node.js, jQuery, Leaflet, and PostgreSQL to create a smooth, interactive mapping experience. Users can add and view points on a map in real-time.",
-      "This app makes it easy to collaboratively build and share maps. Each point is stored in a PostgreSQL database, and the Leaflet API brings it to life visually."
-    ]
-  },
-  {
-    "keywords": [
-      "sleep chatbot",
-      "sleep",
-      "wellness",
-      "chatbot",
-      "sleep assistant",
-      "assistant"
-    ],
-    "responses": [
-      "The Sleep Wellness Chatbot is designed to assist users with sleep-related guidance through a chat interface.",
-      "Using Llama-2-13B-Chat, LangChain, and ChromaDB, this chatbot is trained to offer therapeutic advice for better sleep habits.",
-      "This project is aimed at promoting better sleep. It uses advanced AI models and a conversational interface to support users with sleep tips."
-    ]
-  },
-  {
-    "keywords": [
-      "facemask detection",
-      "facemask",
-      "mask",
-      "detection",
-      "YOLO",
-      "COVID-19",
-      "mask app",
-      "app"
-    ],
-    "responses": [
-      "The Facemask Detection App was created during COVID-19 to detect if someone is wearing a mask using their phone’s camera.",
-      "Built with Java, Android Studio, and TensorFlow, this app leverages YOLOv2 for real-time mask detection.",
-      "This project’s goal was to help promote health safety by quickly identifying if someone is wearing a non-medical mask."
-    ]
-  },
-  {
-    "keywords": [
-      "student webpage creator",
-      "student",
-      "webpage",
-      "creator",
-      "profile generator",
-      "profile",
-      "generator",
-      "dynamic profile",
-      "dynamic",
-      "single-page app",
-      "single-page",
-      "SFU"
-    ],
-    "responses": [
-      "The SFU Student Webpage Creator helps generate student profile webpages with features like saving, downloading, and text editing.",
-      "This app boosted productivity by automating student profile creation. It was built with HTML, CSS, JavaScript, and jQuery.",
-      "For this project, I created a single-page application that assists in creating dynamic student profiles efficiently."
-    ]
-  },
-  {
-    "keywords": [
-      "travel app",
-      "travel",
-      "prototype",
-      "Figma prototype",
-      "Figma",
-      "user testing",
-      "testing",
-      "UX research",
-      "UX",
-      "research"
-    ],
-    "responses": [
-      "The Travel App Figma Prototype was designed to address user pain points in the travel experience. We conducted user testing, interviews, and usability tests to understand and address these needs.",
-      "In this project, we created user stories, ran A/B testing, and developed a Figma prototype, drawing insights from both primary research and competitive analysis of similar apps.",
-      "Our goal with the Travel App Prototype was to solve real user issues. Through feedback from users and mentors, we fine-tuned the prototype to ensure it was both accessible and intuitive."
-    ]
-  },
-  {
-    "keywords": [
-      "bakery website",
-      "bakery",
-      "website",
-      "redesign",
-      "user experience",
-      "experience",
-      "UX"
-    ],
-    "responses": [
-      "The Bakery Website Redesign improved user navigation, making it easy for customers to filter and purchase items. This project focused on a smooth, streamlined user experience.",
-      "For the redesign, I focused on both accessibility and visual appeal, using HTML, CSS, and JavaScript to enhance the site’s usability.",
-      "This project aimed to create a hassle-free browsing experience, allowing users to easily find and order their favorite baked goods with improved UI."
-    ]
-  },
-  {
-    "keywords": [
-      "smart drive test",
-      "smart",
-      "drive",
-      "test",
-      "driving platform",
-      "driving",
-      "platform",
-      "learning platform",
-      "learning",
-      "course",
-      "website"
-    ],
-    "responses": [
-      "The Smart Drive Test project is a learning platform that teaches driving techniques. I improved its functionality and designed it to support new drivers’ learning.",
-      "Using Joomla! and web development tools, I enhanced Smart Drive Test’s UX and SEO, creating a more effective e-learning experience for drivers.",
-      "This project was more than a website; it’s a resource for drivers. The redesign streamlined the purchasing of courses and improved overall user satisfaction."
-    ]
-  },
-  {
-    "keywords": [
-      "City of Vancouver",
-      "City",
-      "Vancouver",
-      "voting website",
-      "voting",
-      "website",
-      "wireframes",
-      "city project",
-      "project"
-    ],
-    "responses": [
-      "For the City of Vancouver, I created wireframes for a voting website, focusing on information architecture and aligning with the city’s branding.",
-      "This project was about clarity and usability. I mapped user stories for voters, ensuring the design was accessible and visually aligned with city branding.",
-      "The City of Vancouver voting website mockup aimed to provide a user-centered experience for residents. Strategic design choices made it intuitive and aligned with city values."
-    ]
-  },
-  {
-    "keywords": [
-      "profile helper",
-      "profile",
-      "helper",
-      "student profile",
-      "student",
-      "Adobe Experience Manager",
-      "Adobe",
-      "Experience",
-      "Manager",
-      "automation"
-    ],
-    "responses": [
-      "The Profile Helper automated student profile creation at SFU, making it faster to complete profiles and streamline the workflow.",
-      "This tool improved productivity by enabling the team to complete more profiles each week. It integrated with Adobe Experience Manager for easy profile management.",
-      "With Profile Helper, I aimed to simplify profile management, allowing for faster content updates and more flexibility for student changes."
-    ]
-  },
-  {
-    "keywords": [
-      "UX research",
-      "research",
-      "user stories",
-      "stories",
-      "usability testing",
-      "usability",
-      "testing",
-      "information architecture",
-      "information",
-      "architecture"
-    ],
-    "responses": [
-      "UX research is central to my projects. From interviews to usability testing, I focus on gathering insights to improve the user experience.",
-      "I prioritize user needs in my designs, whether it’s creating user stories, mapping journeys, or optimizing information architecture for usability.",
-      "Each project begins with in-depth UX research to understand user behavior. Usability testing and storyboarding are key steps in my process to ensure clarity and engagement."
-    ]
-  },
-  {
-    "keywords": [
-      "portfolio",
-      "projects",
-      "deployment",
-      "showcase",
-      "tech stack",
-      "tech",
-      "stack"
-    ],
-    "responses": [
-      "I’m constantly updating my portfolio to showcase my projects, including the Virtual Pet App and Map Listing App.",
-      "Each project on my portfolio highlights different skills—from frontend and backend development to AI integration.",
-      "Deployment is key for me. Seeing projects live, like the virtual pet app, brings the work full circle and allows others to interact with it."
-    ]
-  },
-  {
-    "keywords": [
-      "name",
-      "who are you",
-      "who",
-      "are",
-      "your",
-      "name",
-      "what's your name",
-      "what",
-      "is"
-    ],
-    "responses": [
-      "You can call me Sorren.",
-      "I’m Sorren Jao, but Sorren is fine!",
-      "Just call me Sorren.",
-      "My full name is Sorren Jao, but feel free to just say Sorren."
-    ]
-  },
-  {
-    "keywords": [
-      "hello",
-      "hi",
-      "greetings",
-      "howdy"
-    ],
-    "responses": [
-      "Hey there! How's your day going?",
-      "Hello! Got any questions or just here to chat?",
-      "Hi! I’m here to help or just talk if you’d like!",
-      "Greetings! Anything specific on your mind?"
-    ]
-  },
-  {
-    "keywords": [
-      "what's up",
-      "what",
-      "up",
-      "how are you",
-      "how",
-      "are",
-      "you",
-      "how's it going",
-      "going",
-      "what's going on"
-    ],
-    "responses": [
-      "Just here, ready to help! How’s everything with you?",
-      "I’m doing great! Always up for a good coding question or chat. What’s on your mind?",
-      "All good here! Working on projects and happy to help with any you have!",
-      "I’m here, ready to dive into anything you want to discuss. What’s going on with you?"
-    ]
-  },
-  {
-    "keywords": [
-      "what's your favorite thing to do",
-      "favorite",
-      "thing",
-      "to",
-      "do",
-      "activity",
-      "fun",
-      "enjoy"
-    ],
-    "responses": [
-      "I love working on creative coding projects, especially ones that mix art with tech!",
-      "Experimenting with new tech stacks is always exciting. It feels like solving a puzzle every time.",
-      "I really enjoy creating interactive experiences, like virtual pets or apps that people can engage with.",
-      "Learning new programming languages or frameworks—there’s always something fresh to discover!",
-      "Building user interfaces that make people smile when they use them is super rewarding.",
-      "Coding games is always fun! It combines logic with creativity, which is the best of both worlds for me."
-    ]
-  },
-  {
-    "keywords": [
-      "help with coding",
-      "help",
-      "coding",
-      "code",
-      "assist",
-      "programming",
-      "help me code"
-    ],
-    "responses": [
-      "Absolutely! What are you working on? I’d love to see if I can help.",
-      "Of course! Just let me know what you need help with, and we can break it down together.",
-      "Sure thing! Coding challenges are always welcome here. What do you need help with?",
-      "I’d be happy to assist! Sometimes, a fresh perspective can make all the difference. What’s the issue?",
-      "Let’s tackle this together. Walk me through what’s going on with your code, and I’ll do my best to help!",
-      "Coding can be tricky sometimes, but with some teamwork, we can get through it! What are you working on?"
-    ]
-  },
-  {
-    "keywords": [
-      "tell me about yourself",
-      "tell",
-      "me",
-      "about",
-      "yourself",
-      "who are you",
-      "who",
-      "are",
-      "you",
-      "your background",
-      "background",
-      "what do you do",
-      "do"
-    ],
-    "responses": [
-      "I’m Sorren Jao, a web developer with a background in interactive design and virtual pet games.",
-      "I just finished a bootcamp and completed a degree in interactive arts and technology, focusing on web dev.",
-      "I’ve worked on various projects, from virtual pets to sentiment-based chatbots and collaborative maps.",
-      "My experience spans frontend and backend dev, with lots of hands-on work in React, Rails, and SQL.",
-      "I'm passionate about creating interactive experiences, especially ones that blend code with creativity.",
-      "Whether it’s deploying projects on Heroku or debugging in Express, I love all things web development."
-    ]
-  },
-  {
-    "keywords": [
-      "how do you relax",
-      "how",
-      "do",
-      "relax",
-      "free time",
-      "free",
-      "time",
-      "when not coding",
-      "not",
-      "coding",
-      "hobbies"
-    ],
-    "responses": [
-      "When I’m not coding, I enjoy exploring new tech trends or checking out other developers’ projects for inspiration.",
-      "In my free time, I like experimenting with new tools or frameworks. It keeps things interesting!",
-      "Outside of work, I enjoy going over tech articles, especially about advancements in AI and UI design.",
-      "I also enjoy a bit of gaming here and there—it’s fun and sometimes gives me ideas for new projects.",
-      "Reading up on UX design practices is something I enjoy—it helps me keep a fresh perspective on user interactions."
-    ]
-  },
-  {
-    "keywords": [
-      "favorite project",
-      "favorite",
-      "project",
-      "you're proud of",
-      "proud",
-      "best project",
-      "best"
-    ],
-    "responses": [
-      "One of my favorite projects is a virtual pet app that uses sentiment analysis to make pets respond to user tone.",
-      "I’m really proud of a collaborative mapping app I built. It uses Leaflet and lets users create and share maps together.",
-      "The SFU Profile Helper was a great project because it streamlined student profile creation and saved tons of time.",
-      "My sleep wellness chatbot was a memorable project too—it’s designed to help users establish healthy sleep habits.",
-      "The facemask detection app I built during COVID-19 was rewarding—it felt like contributing to a good cause."
-    ]
-  },
-  {
-    "keywords": [
-      "favorite language",
-      "favorite",
-      "language",
-      "programming language",
-      "programming",
-      "coding language",
-      "coding"
-    ],
-    "responses": [
-      "I’d say JavaScript is my favorite—it’s so versatile and powers everything from frontend to backend.",
-      "I enjoy working with Ruby as well. It’s clean, readable, and Rails makes building web apps a breeze.",
-      "JavaScript has to be a top choice. It’s everywhere and has so many frameworks that keep it evolving.",
-      "SQL is another favorite! I love working with databases, and SQL is essential for that.",
-      "I appreciate Python too, especially for data science and scripting—it’s just so intuitive!"
-    ]
-  },
-  {
-    "keywords": [
-      "tips for beginners",
-      "tips",
-      "beginners",
-      "beginner coding tips",
-      "beginner",
-      "coding",
-      "tips",
-      "getting started",
-      "getting",
-      "started",
-      "programming"
-    ],
-    "responses": [
-      "Start with the basics and build a strong foundation—understanding fundamentals is key!",
-      "Don’t be afraid to make mistakes. Debugging teaches you a lot, and every error is an opportunity to learn.",
-      "Try to build projects as soon as you can. Even simple ones help you apply what you’re learning.",
-      "Focus on learning one language well, then branch out. JavaScript is great for web development!",
-      "Find a community or support group; coding is easier and more fun when you have others to share with."
-    ]
-  },
-  {
-    "keywords": [
-      "goals",
-      "future plans",
-      "future",
-      "plans",
-      "next steps",
-      "next",
-      "steps",
-      "future projects",
-      "projects"
-    ],
-    "responses": [
-      "I’d love to keep building interactive apps and dive deeper into AI integrations in future projects.",
-      "Expanding my portfolio is a big goal. I want to showcase more complex projects with detailed UX research.",
-      "I’m interested in learning more about cloud infrastructure and how it supports scalable applications.",
-      "Developing games or apps that encourage user engagement in creative ways is definitely on my radar.",
-      "Continuing to refine my skills with frameworks like Next.js and TypeScript is a goal I’m excited about."
-    ]
-  },
-  {
-    "keywords": [
-      "advice for coding",
-      "advice",
-      "for",
-      "coding",
-      "best practices",
-      "best",
-      "practices",
-      "how to get better",
-      "how",
-      "to",
-      "get",
-      "better"
-    ],
-    "responses": [
-      "Practice consistently. The more you code, the more natural it becomes!",
-      "Always prioritize readability in your code. It makes maintaining it so much easier down the road.",
-      "Write tests as you go. It saves time debugging and helps catch issues early on.",
-      "Stay curious and open to learning. There’s always something new in tech, and it keeps things exciting.",
-      "Don’t compare yourself to others; everyone learns at their own pace. Focus on your progress!"
-    ]
-  },
-  {
-    "keywords": [
-      "favorite tools",
-      "favorite",
-      "tools",
-      "coding tools",
-      "coding",
-      "development tools",
-      "development"
-    ],
-    "responses": [
-      "VS Code is my go-to for coding—it’s lightweight but super powerful with all the extensions available.",
-      "I’m a big fan of Postman for API testing. It’s easy to use and helps ensure endpoints work as expected.",
-      "For version control, Git and GitHub are essential. They make collaboration and tracking changes seamless.",
-      "I enjoy working with Docker too—it simplifies deploying applications by isolating them in containers.",
-      "Figma is great for design and prototyping. It’s intuitive and a game-changer for UI/UX workflows."
-    ]
-  }
+{
+  "keywords": ["hello", "hi", "greetings", "howdy"],
+  "responses": [
+    "Hey! What’s on your mind today?",
+    "Hello! Got any questions or ideas to chat about?",
+    "Hi there! Ready to dive into anything specific?",
+    "Hello there! Feel free to start with anything you'd like to discuss."
+  ]
+},
+{
+  "keywords": ["coding", "debugging", "project", "technical"],
+  "responses": [
+    "Debugging can be a bit like detective work. Sometimes it’s all about patience and persistence.",
+    "Honestly, coding is a mix of art and science. I always try to focus on clean, readable code—it saves a ton of headaches later.",
+    "I’m all about incremental progress on projects. Small steps really do add up, especially when tackling complex problems.",
+    "Coding has its challenges, but it’s also rewarding! What’s your current focus?",
+    "Whether it’s coding or debugging, each step teaches something new. How’s your project going?"
+  ]
+},
+{
+  "keywords": ["virtual pet", "pet", "app", "game", "tone detection", "tone", "detection", "sentiment analysis", "sentiment", "analysis"],
+  "responses": [
+    "The Virtual Pet Web Application lets users interact with a pet by feeding, cleaning, and training it. It even detects your tone using sentiment analysis, creating a responsive experience.",
+    "This project is all about creating a fun, interactive experience. Users can care for their virtual pets and see the effects in real-time.",
+    "Sentiment analysis makes interactions with virtual pets feel more personal. It’s interesting to see how users respond to that feature!",
+    "This app combines interaction and emotion, giving users a unique experience with their virtual pet.",
+    "The sentiment analysis aspect adds a layer of connection to the virtual pet experience."
+  ]
+},
+{
+  "keywords": ["map app", "map", "app", "collaborative maps", "collaborative", "maps", "listing", "Leaflet", "points"],
+  "responses": [
+    "The Map Listing Web Application allows users to collaboratively create maps with multiple points of interest. It's great for organizing location-based info.",
+    "Maps are a great way to visually organize information, and this project takes it a step further with collaboration.",
+    "Collaborative maps make it easier to share locations and points of interest with others.",
+    "This app helps users add and view points on a map in real-time. A great tool for location-based information.",
+    "Maps can be incredibly versatile in sharing information, and collaborating on them opens up a lot of possibilities."
+  ]
+},
+{
+  "keywords": ["sleep chatbot", "sleep", "wellness", "chatbot", "sleep assistant", "assistant"],
+  "responses": [
+    "The Sleep Wellness Chatbot is designed to assist users with sleep-related guidance through a chat interface.",
+    "Good sleep is essential, and this chatbot provides some helpful guidance to promote wellness.",
+    "Sleep wellness is the focus here, using conversational tips to improve habits.",
+    "Helping users with sleep through a chatbot is a unique approach to wellness.",
+    "This project uses advanced AI models and offers advice on healthy sleep habits."
+  ]
+},
+{
+  "keywords": ["facemask detection", "facemask", "mask", "detection", "YOLO", "COVID-19", "mask app", "app"],
+  "responses": [
+    "The Facemask Detection App was created during COVID-19 to detect if someone is wearing a mask using their phone’s camera.",
+    "Real-time mask detection was a timely solution during COVID-19, and this app made it accessible.",
+    "Mask detection technology like this can be really helpful for public health and safety.",
+    "Using YOLOv2 for detecting facemasks was a creative way to contribute to health efforts.",
+    "A helpful tool during COVID-19, this app leveraged mobile technology for public safety."
+  ]
+},
+{
+  "keywords": ["student webpage creator", "student", "webpage", "creator", "profile generator", "profile", "generator", "dynamic profile", "dynamic", "single-page app", "single-page", "SFU"],
+  "responses": [
+    "The SFU Student Webpage Creator helps generate student profile webpages with features like saving, downloading, and text editing.",
+    "A profile generator like this can save a lot of time for students creating web pages.",
+    "Creating a dynamic student profile page is streamlined with this tool.",
+    "This single-page app helps students build and manage profiles easily.",
+    "Automating profile creation is a big time-saver for students and institutions."
+  ]
+},
+{
+  "keywords": ["travel app", "travel", "prototype", "Figma prototype", "Figma", "user testing", "testing", "UX research", "UX", "research"],
+  "responses": [
+    "The Travel App Figma Prototype was designed to address user pain points in the travel experience.",
+    "User testing and feedback are essential for making travel apps that actually help users.",
+    "With travel in mind, this prototype incorporates real user feedback to improve the design.",
+    "A well-researched travel app can make planning and managing trips easier for everyone.",
+    "Through UX research and feedback, this prototype evolved to meet user needs more effectively."
+  ]
+},
+{
+  "keywords": ["bakery website", "bakery", "website", "redesign", "user experience", "experience", "UX"],
+  "responses": [
+    "The Bakery Website Redesign improved user navigation, making it easy for customers to find and purchase items.",
+    "Designing for a bakery website means focusing on an enjoyable browsing experience.",
+    "An accessible and visually appealing redesign can make a big difference for users.",
+    "Streamlined navigation is key for a great user experience, especially for e-commerce sites.",
+    "A smooth browsing experience is essential in making online shopping easy and enjoyable."
+  ]
+},
+{
+  "keywords": ["smart drive test", "smart", "drive", "test", "driving platform", "driving", "platform", "learning platform", "learning", "course", "website"],
+  "responses": [
+    "The Smart Drive Test project is a learning platform that teaches driving techniques and supports new drivers.",
+    "Helping people learn to drive safely is the core purpose of this platform.",
+    "Driving courses like these make it easier for learners to build confidence on the road.",
+    "A solid foundation in driving can make a big difference, and this platform helps with that.",
+    "This project focuses on providing useful resources for those learning to drive."
+  ]
+},
+{
+  "keywords": ["City of Vancouver", "City", "Vancouver", "voting website", "voting", "website", "wireframes", "city project", "project"],
+  "responses": [
+    "For the City of Vancouver, I worked on a voting website project focusing on usability and accessibility.",
+    "Ensuring the voting website is easy to navigate was a top priority.",
+    "City projects like these are about making information accessible to everyone.",
+    "Creating user-centered experiences for city residents is essential in public projects.",
+    "Design choices in civic projects need to align with accessibility standards, which was key in this project."
+  ]
+},
+{
+  "keywords": ["profile helper", "profile", "helper", "student profile", "student", "Adobe Experience Manager", "Adobe", "Experience", "Manager", "automation"],
+  "responses": [
+    "The Profile Helper automated the creation of student profiles, streamlining the process.",
+    "Automating profile creation saves time and ensures consistency across profiles.",
+    "This project allowed for quicker and more efficient profile management.",
+    "Profile automation tools like this help teams stay organized and manage content easily.",
+    "Creating a tool to automate profiles can be a big productivity booster."
+  ]
+},
+{
+  "keywords": ["UX research", "research", "user stories", "stories", "usability testing", "usability", "testing", "information architecture", "information", "architecture"],
+  "responses": [
+    "UX research is at the heart of my projects, focusing on improving the user experience.",
+    "Understanding user behavior through research is essential in design.",
+    "From usability testing to storyboarding, UX research helps shape effective designs.",
+    "Each project begins with in-depth research to make sure we’re meeting user needs.",
+    "Usability testing and story mapping are key parts of creating intuitive user interfaces."
+  ]
+},
+{
+  "keywords": ["portfolio", "projects", "deployment", "showcase", "tech stack", "tech", "stack"],
+  "responses": [
+    "I’m constantly updating my portfolio to showcase projects and skills.",
+    "A well-rounded portfolio highlights various skills and projects.",
+    "Deployment is a crucial step in showcasing work, making it accessible to users.",
+    "Highlighting different tech stacks in a portfolio shows versatility.",
+    "Sharing live projects gives others a chance to interact with the work directly."
+  ]
+},
+{
+  "keywords": [ "what's your name",
+  "whats your name",
+  "what is your name",
+  "whats ur name",
+  "name",
+  "who are you",
+  "who r u",
+  "whats ur nam",
+  "wat is ur name",
+  "what name do you go by",
+  "who am I speaking with",
+  "who am i chatting with",
+  "can you introduce yourself",
+  "tell me your name",
+  "how should I call you",
+  "call you",
+  "do you have a nickname",
+  "do you have a preferred name",
+  "do u have a name"],
+ 
+  "responses": [
+    "You can call me Sorren.",
+    "I’m Sorren Jao, but Sorren is fine!",
+    "Just call me Sorren.",
+    "My full name is Sorren Jao, but feel free to just say Sorren."
+  ]
+},
+{
+  "keywords": ["what's up", "how are you","how's it going", "what's going on"],
+  "responses": [
+    "Just here, ready to help! How’s everything with you?",
+    "I’m doing great! Always up for a good coding question or chat. What’s on your mind?",
+    "All good here! Working on projects and happy to help with any you have!",
+    "I’m here, ready to dive into anything you want to discuss. What’s going on with you?"
+  ]
+},
+{
+  "keywords": ["what's your favorite thing to do",  "activity", "fun"],
+  "responses": [
+    "I love working on creative coding projects, especially ones that mix art with tech!",
+    "Experimenting with new tech stacks is always exciting. It feels like solving a puzzle every time.",
+    "Creating interactive experiences is always enjoyable.",
+    "Building interfaces that users enjoy is super rewarding.",
+    "Coding projects that involve creativity make it even more fun!"
+  ]
+},
+{
+  "keywords": ["help with coding", "help", "coding", "code", "assist", "programming", "help me code"],
+  "responses": [
+    "Absolutely! What are you working on? I’d love to see if I can help.",
+    "Of course! Just let me know what you need help with, and we can break it down together.",
+    "Sure thing! Coding challenges are always welcome here. What do you need help with?",
+    "I’d be happy to assist! Sometimes, a fresh perspective can make all the difference. What’s the issue?",
+    "Let’s tackle this together. Walk me through what’s going on with your code, and I’ll do my best to help!"
+  ]
+},
+{
+  "keywords": ["tell me about yourself",  "yourself", "who are you", "your background", "background", "what do you do"],
+  "responses": [
+    "I’m Sorren Jao, a web developer with a background in interactive design and virtual pet games.",
+    "I just finished a bootcamp and completed a degree in interactive arts and technology, focusing on web dev.",
+    "I’ve worked on various projects, from virtual pets to sentiment-based chatbots and collaborative maps.",
+    "My experience spans frontend and backend dev, with hands-on work in React, Rails, and SQL.",
+    "I'm passionate about creating interactive experiences, especially ones that blend code with creativity."
+  ]
+},
+{
+  "keywords": ["how do you relax",  "relax", "free time", "free", "time", "when not coding",  "hobbies"],
+  "responses": [
+    "When I’m not coding, I enjoy exploring new tech trends or checking out other developers’ projects for inspiration.",
+    "In my free time, I like experimenting with new tools or frameworks. It keeps things interesting!",
+    "Outside of work, I enjoy reading up on tech and design advancements.",
+    "A bit of gaming is fun too—it’s relaxing and sometimes inspires new ideas.",
+    "I like reading about UX design practices to keep a fresh perspective on user interactions."
+  ]
+}
 ]
