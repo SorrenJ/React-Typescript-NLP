@@ -6,73 +6,79 @@ interface Message {
   text: string;
 }
 
-
 function SorrenChatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [userInput, setUserInput] = useState<string>('');
 
-
-    // Define the prompt type for better type safety
-    interface Prompt {
-      label: string;
-      prompt: string;
-    }
-  // Predefined prompts
-const prompts = [
-  { label: "Tell me about yourself", prompt: "tell me about yourself" },
-  { label: "Help with coding", prompt: "help with coding" },
-  { label: "What's your name", prompt: "what's your name" },
-  { label: "UX research", prompt: "UX research" },
-  { label: "City of Vancouver", prompt: "tell me about your City of Vancouver project" },
-  { label: "Smart drive test", prompt: "tell me about your smart drive test" },
-  { label: "Bakery website", prompt: "tell me about your bakery website" },
-  { label: "Travel app", prompt: "tell me about your UX process with the travel app" },
-  { label: "Student webpage creator", prompt: "tell me about your student webpage creator" },
-  { label: "Facemask detection", prompt: "tell me about your facemask detection project" },
-  { label: "Sleep chatbot", prompt: "tell me about your sleep chatbot project" },
-  { label: "Map app", prompt: "tell me about your map app project" },
-  { label: "Virtual pet", prompt: "tell me about your virtual pet project" },
-  { label: "Tell me about your past job experience", prompt: "tell me about your past job experience" },
-  { label: "What do you do for a living", prompt: "what do you do for a living" },
-  { label: "Tell me about your education", prompt: "did you study at Simon Fraser University" }
-];
- // Function to send a custom prompt
- const sendPrompt = async (prompt: string) => {
-  setMessages([...messages, { sender: 'user', text: prompt }]);
-
-  try {
-    const response = await axios.post<{ response: string }>('http://localhost:5000/api/generate-response', { input: prompt });
-    setMessages((prevMessages) => [
-      ...prevMessages,
-      { sender: 'user', text: prompt },
-      { sender: 'sorren', text: response.data.response }
-    ]);
-  } catch (error) {
-    console.error("Error fetching response:", error);
+  // Define the prompt type for better type safety
+  interface Prompt {
+    label: string;
+    prompt: string;
   }
-};
 
+  // Predefined prompts
+  const prompts: Prompt[] = [
+    { label: "Tell me about yourself", prompt: "tell me about yourself" },
+    { label: "Help with coding", prompt: "help with coding" },
+    { label: "What's your name", prompt: "what's your name" },
+    { label: "UX research", prompt: "UX research" },
+    { label: "City of Vancouver", prompt: "tell me about your City of Vancouver " },
+    { label: "Smart drive test", prompt: "tell me about your smart drive test" },
+    { label: "Bakery website", prompt: "tell me about your bakery website" },
+    { label: "Travel app", prompt: "tell me about your UX process with the travel app" },
+    { label: "Student webpage creator", prompt: "tell me about your student webpage creator" },
+    { label: "Facemask detection", prompt: "tell me about your facemask detection project" },
+    { label: "Sleep chatbot", prompt: "tell me about your sleep chatbot project" },
+    { label: "Map app", prompt: "tell me about your map app project" },
+    { label: "Virtual pet", prompt: "tell me about your virtual pet project" },
+    { label: "Tell me about your past job experience", prompt: "tell me about your work history experience" },
+    { label: "What do you do for a living", prompt: "what do you do for a living" },
+    { label: "Tell me about your education", prompt: "did you study at Simon Fraser University" }
+  ];
 
+  // Function to send a custom prompt
+  const sendPrompt = async (prompt: string) => {
+    // Add the prompt as a user message to the chat
+    setMessages((prevMessages) => [...prevMessages, { sender: 'user', text: prompt }]);
+
+    try {
+      const response = await axios.post<{ response: string }>('/api/generate-response', { input: prompt });
+
+      // Add Sorren's response to the chat
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { sender: 'sorren', text: response.data.response }
+      ]);
+    } catch (error) {
+      console.error("Error fetching response:", error);
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { sender: 'sorren', text: "I'm having trouble responding right now. Please try again later." }
+      ]);
+    }
+  };
 
   // Function to send user input to the backend API and receive a response
   const handleUserMessage = async () => {
     if (!userInput.trim()) return; // Prevent empty messages
 
     // Add the user message to the chat history, typed as Message
-    const newMessages = [...messages, { sender: 'user', text: userInput } as Message];
-    setMessages(newMessages);
+    setMessages((prevMessages) => [...prevMessages, { sender: 'user', text: userInput }]);
 
     try {
       // Send user input to the backend and get the response
       const response = await axios.post<{ response: string }>('/api/generate-response', { input: userInput });
 
       // Append Sorren's response to the chat history
-      setMessages([...newMessages, { sender: 'sorren', text: response.data.response } as Message]);
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { sender: 'sorren', text: response.data.response }
+      ]);
     } catch (error) {
       console.error("Error fetching response:", error);
-      setMessages([
-        ...newMessages,
-        { sender: 'sorren', text: "I'm having trouble responding right now. Please try again later." } as Message
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { sender: 'sorren', text: "I'm having trouble responding right now. Please try again later." }
       ]);
     }
 

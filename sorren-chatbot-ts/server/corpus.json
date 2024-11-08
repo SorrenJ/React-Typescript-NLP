@@ -1,5 +1,6 @@
 [
 {
+  "priority":2,
   "keywords": ["hello", "hi", "greetings", "howdy"],
   "responses": [
     "Hey! What’s on your mind today?",
@@ -9,6 +10,7 @@
   ]
 },
 {
+  "priority": 5,
   "keywords": ["coding", "debugging", "project", "technical"],
   "responses": [
     "Debugging can be a bit like detective work. Sometimes it’s all about patience and persistence.",
@@ -19,7 +21,8 @@
   ]
 },
 {
-  "keywords": ["virtual pet", "pet", "app", "game", "tone detection", "tone", "detection", "sentiment analysis", "sentiment", "analysis"],
+  "priority": 9,
+  "keywords": ["virtual pet", "pet", "app", "game", "tone detection", "tone", "detection", "sentiment analysis", "sentiment", "analysis", "project"],
   "responses": [
     "The Virtual Pet Web Application lets users interact with a pet by feeding, cleaning, and training it. It even detects your tone using sentiment analysis, creating a responsive experience.",
     "This project is all about creating a fun, interactive experience. Users can care for their virtual pets and see the effects in real-time.",
@@ -29,7 +32,8 @@
   ]
 },
 {
-  "keywords": ["map app", "map", "app", "collaborative maps", "collaborative", "maps", "listing", "Leaflet", "points"],
+  "priority": 9,
+  "keywords": ["map app", "map", "app", "collaborative maps", "collaborative", "maps", "listing", "Leaflet", "points", "project"],
   "responses": [
     "The Map Listing Web Application allows users to collaboratively create maps with multiple points of interest. It's great for organizing location-based info.",
     "Maps are a great way to visually organize information, and this project takes it a step further with collaboration.",
@@ -39,7 +43,8 @@
   ]
 },
 {
-  "keywords": ["sleep chatbot", "sleep", "wellness", "chatbot", "sleep assistant", "assistant"],
+  "priority": 9,
+  "keywords": ["sleep chatbot", "sleep", "wellness", "chatbot", "sleep assistant", "assistant", "project"],
   "responses": [
     "The Sleep Wellness Chatbot is designed to assist users with sleep-related guidance through a chat interface.",
     "Good sleep is essential, and this chatbot provides some helpful guidance to promote wellness.",
@@ -49,7 +54,8 @@
   ]
 },
 {
-  "keywords": ["facemask detection", "facemask", "mask", "detection", "YOLO", "COVID-19", "mask app", "app"],
+  "priority": 9,
+  "keywords": ["facemask detection", "facemask", "mask", "detection", "YOLO", "COVID-19", "mask app", "app", "project"],
   "responses": [
     "The Facemask Detection App was created during COVID-19 to detect if someone is wearing a mask using their phone’s camera.",
     "Real-time mask detection was a timely solution during COVID-19, and this app made it accessible.",
@@ -59,7 +65,8 @@
   ]
 },
 {
-  "keywords": ["student webpage creator", "student", "webpage", "creator", "profile generator", "profile", "generator", "dynamic profile", "dynamic", "single-page app", "single-page", "SFU"],
+  "priority": 9,
+  "keywords": ["student webpage creator", "student", "webpage", "creator", "profile generator", "profile", "generator", "dynamic profile", "dynamic", "single-page app", "single-page", "SFU", "project"],
   "responses": [
     "The SFU Student Webpage Creator helps generate student profile webpages with features like saving, downloading, and text editing.",
     "A profile generator like this can save a lot of time for students creating web pages.",
@@ -69,7 +76,8 @@
   ]
 },
 {
-  "keywords": ["travel app", "travel", "prototype", "Figma prototype", "Figma", "user testing", "testing", "UX research", "UX", "research"],
+  "priority": 9,
+  "keywords": ["travel app", "travel", "prototype", "Figma prototype", "Figma", "user testing", "testing", "UX research", "UX", "research", "project"],
   "responses": [
     "The Travel App Figma Prototype was designed to address user pain points in the travel experience.",
     "User testing and feedback are essential for making travel apps that actually help users.",
@@ -79,7 +87,8 @@
   ]
 },
 {
-  "keywords": ["bakery website", "bakery", "website", "redesign", "user experience", "experience", "UX"],
+  "priority": 9,
+  "keywords": ["bakery website", "bakery", "website", "redesign", "user experience", "experience", "UX", "project"],
   "responses": [
     "The Bakery Website Redesign improved user navigation, making it easy for customers to find and purchase items.",
     "Designing for a bakery website means focusing on an enjoyable browsing experience.",
@@ -89,7 +98,8 @@
   ]
 },
 {
-  "keywords": ["smart drive test", "smart", "drive", "test", "driving platform", "driving", "platform", "learning platform", "learning", "course", "website"],
+  "priority": 9,
+  "keywords": ["smart drive test", "smart", "drive", "test", "driving platform", "driving", "platform", "learning platform", "learning", "course", "website", "project"],
   "responses": [
     "The Smart Drive Test project is a learning platform that teaches driving techniques and supports new drivers.",
     "Helping people learn to drive safely is the core purpose of this platform.",
@@ -99,6 +109,7 @@
   ]
 },
 {
+  "priority": 9,
   "keywords": ["City of Vancouver", "City", "Vancouver", "voting website", "voting", "website", "wireframes", "city project", "project"],
   "responses": [
     "For the City of Vancouver, I worked on a voting website project focusing on usability and accessibility.",
@@ -109,7 +120,8 @@
   ]
 },
 {
-  "keywords": ["profile helper", "profile", "helper", "student profile", "student", "Adobe Experience Manager", "Adobe", "Experience", "Manager", "automation"],
+  "priority": 9,
+  "keywords": ["profile helper", "profile", "helper", "student profile", "student", "Adobe Experience Manager", "Adobe", "Experience", "Manager", "automation", "project"],
   "responses": [
     "The Profile Helper automated the creation of student profiles, streamlining the process.",
     "Automating profile creation saves time and ensures consistency across profiles.",
@@ -119,7 +131,8 @@
   ]
 },
 {
-  "keywords": ["UX research", "research", "user stories", "stories", "usability testing", "usability", "testing", "information architecture", "information", "architecture"],
+  "priority": 5,
+  "keywords": ["UX research", "research", "user stories", "stories", "usability testing", "usability", "testing", "information architecture", "information", "architecture", "project"],
   "responses": [
     "UX research is at the heart of my projects, focusing on improving the user experience.",
     "Understanding user behavior through research is essential in design.",
@@ -129,6 +142,7 @@
   ]
 },
 {
+  "priority": 5,
   "keywords": ["portfolio", "projects", "deployment", "showcase", "tech stack", "tech", "stack"],
   "responses": [
     "I’m constantly updating my portfolio to showcase projects and skills.",
@@ -139,6 +153,7 @@
   ]
 },
 {
+  "priority": 9,
   "keywords": ["what's your name", "whats your name", "what is your name", "whats ur name", "whats ur nam", "wat is ur name", 
   "name", "whats ur nme", "who are you", "who r u", "who are u", "what name do you go by", "what’s the name you go by", 
   "what should I call you", "who am I speaking with", "who am i chatting with", "who am I talkin to", 
@@ -170,6 +185,7 @@
   ]
 },
 {
+  "priority": 9,
   "keywords": [
     "what's your favorite thing to do", "whats ur fav thing to do", "fav thing to do", "what do u like doing", 
     "what do you enjoy", "what’s your passion", "passion", "what’s your hobby", "hobbies", "hobby", "do you have any hobbies", 
@@ -201,6 +217,7 @@
 }
 ,
 {
+  "priority": 5,
   "keywords": ["help with coding", "help", "coding", "code", "assist", "programming", "help me code"],
   "responses": [
     "Absolutely! What are you working on? I’d love to see if I can help.",
@@ -211,6 +228,7 @@
   ]
 },
 {
+  "priority": 9,
   "keywords": ["tell me about yourself", "tell me abt urself", "tell me about urself", "tell me abot youself", "tell me abt u", 
     "about yourself", "abt urself", "tell me who u r", "who are you", "who r u", "who're you", "who is this", 
     "who is talking", "who am I talking to", "yourself", "urself", "your self", "ur self", "ur background", 
@@ -285,6 +303,7 @@
   ]
 },
 {
+  "priority": 5,
   "keywords": ["how do you relax",  "relax", "free time", "free", "time", "when not coding",  "hobbies"],
   "responses": [
     "When I’m not coding, I enjoy exploring new tech trends or checking out other developers’ projects for inspiration.",
@@ -295,6 +314,7 @@
   ]
 },
 {
+  "priority": 9,
   "keywords": [
     "tell me about your past job experience", "what jobs have you done", "describe your job history", 
     "past job experience", "work experience", "professional experience", "what roles have you held", 
@@ -318,6 +338,7 @@
 },
 
 {
+  "priority": 9,
   "keywords": [
 "profession", "proffession", "proffesion", "ocupation", "occupation", "emplyment", "employment", "do u have a job", 
     "do you have job", "looking for work", "looking for wrk", "looking for a job", "what kind of work do you do", 
@@ -349,6 +370,7 @@
   ]
 },
 {
+  "priority": 9,
   "keywords": [
     "tell me about your education", "tell me about ur education", "tell me abut your education", "what’s your educational background", 
     "wht’s your educational background", "whats ur educational background", "where did you study", "where did u study", 
@@ -390,6 +412,7 @@
 },
 
 {
+  "priority": 5,
   "keywords": [
     "tell me about your family", "do you have siblings", "any brothers or sisters", "who is Noriko", 
     "tell me about Noriko", "family members", "do you have family", "who's in your family", 
@@ -416,6 +439,7 @@
   ]
 },
 {
+  "priority": 5,
   "keywords": [
     "favorite video games", "do you play games", "what video games do you like", "favorite games", 
     "what games do you play", "do you play video games", "what’s your favorite game", "what was your first game", 
