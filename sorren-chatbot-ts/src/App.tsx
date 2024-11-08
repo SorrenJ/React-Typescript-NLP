@@ -27,6 +27,8 @@ function SorrenChatbot() {
   const [userInput, setUserInput] = useState<string>('');
   const [corpus, setCorpus] = useState<CorpusEntry[]>([]);
   const [memory, setMemory] = useState<Memory>({}); // Generalized memory object
+  const [isLearning, setIsLearning] = useState(false); // Flag to track learning state
+  const [newKeywords, setNewKeywords] = useState<string[]>([]); // Store unrecognized keywords
 
   useEffect(() => {
     const fetchCorpus = async () => {
@@ -57,74 +59,34 @@ function SorrenChatbot() {
 
   const handleUserMessage = async () => {
     const tone = detectTone(userInput);
+    const response = getResponse(userInput);
 
-    // Extracting specific details from user input
-    if (userInput.toLowerCase().includes("my name is")) {
-      const name = userInput.split("my name is ")[1];
-      if (name) {
-        setMemory((prev) => ({ ...prev, name: name.trim() }));
-        const response = `Nice to meet you, ${name}! I'll remember that.`;
-        setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: response }]);
-        setUserInput('');
-        return;
-      }
-    } else if (userInput.toLowerCase().includes("my favorite color is")) {
-      const color = userInput.split("my favorite color is ")[1];
-      if (color) {
-        setMemory((prev) => ({ ...prev, favoriteColor: color.trim() }));
-        const response = `Got it! Your favorite color is ${color}. I'll remember that.`;
-        setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: response }]);
-        setUserInput('');
-        return;
-      }
-    } else if (userInput.toLowerCase().includes("i live in")) {
-      const location = userInput.split("i live in ")[1];
-      if (location) {
-        setMemory((prev) => ({ ...prev, location: location.trim() }));
-        const response = `Thanks for letting me know! I'll remember that you live in ${location}.`;
-        setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: response }]);
-        setUserInput('');
-        return;
-      }
-    } else if (userInput.toLowerCase().includes("my hobby is")) {
-      const hobby = userInput.split("my hobby is ")[1];
-      if (hobby) {
-        setMemory((prev) => ({ ...prev, hobby: hobby.trim() }));
-        const response = `Awesome! I'll remember that your hobby is ${hobby}.`;
-        setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: response }]);
-        setUserInput('');
-        return;
+    if (response) {
+      // Existing response found
+      setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: `${response} (I sense a ${tone} tone)` }]);
+    } else if (!isLearning) {
+      // No existing response, enter learning mode and prompt user for feedback
+      setIsLearning(true);
+      setNewKeywords([userInput.toLowerCase()]); // Store the unrecognized input as new keywords
+      setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: "I'm still learning! How should I respond to this?" }]);
+    } else {
+      // Capture user-defined response for new keywords and save it
+      const userDefinedResponse = userInput;
+      setIsLearning(false); // Exit learning mode
+
+      // Save the new keywords and user-defined response to the backend
+      try {
+        await axios.post('http://localhost:5000/api/learn', {
+          keywords: newKeywords,
+          response: userDefinedResponse
+        });
+        console.log("New learning data saved.");
+        setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: "Got it! I'll remember that for next time." }]);
+      } catch (error) {
+        console.error("Error saving learning data:", error);
       }
     }
 
-    // Handle specific questions about stored memory
-    if (userInput.toLowerCase().includes("what is my name")) {
-      const response = memory.name ? `Your name is ${memory.name}.` : "I'm sorry, I don't know your name yet.";
-      setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: response }]);
-      setUserInput('');
-      return;
-    } else if (userInput.toLowerCase().includes("what is my favorite color")) {
-      const response = memory.favoriteColor ? `Your favorite color is ${memory.favoriteColor}.` : "I don't know your favorite color yet.";
-      setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: response }]);
-      setUserInput('');
-      return;
-    } else if (userInput.toLowerCase().includes("where do i live")) {
-      const response = memory.location ? `You live in ${memory.location}.` : "I'm not sure where you live yet.";
-      setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: response }]);
-      setUserInput('');
-      return;
-    } else if (userInput.toLowerCase().includes("what is my hobby")) {
-      const response = memory.hobby ? `Your hobby is ${memory.hobby}.` : "I don't know your hobby yet.";
-      setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: response }]);
-      setUserInput('');
-      return;
-    }
-
-    // Normal response handling
-    const response = getResponse(userInput) || "I'm still learning! I'll remember this for next time.";
-    const finalResponse = `${response} (I sense a ${tone} tone)`;
-
-    setMessages([...messages, { sender: 'user', text: userInput }, { sender: 'sorren', text: finalResponse }]);
     setUserInput('');
   };
 

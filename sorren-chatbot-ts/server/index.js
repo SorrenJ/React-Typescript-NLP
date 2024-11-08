@@ -40,7 +40,6 @@ app.post('/api/learn', express.json(), (req, res) => {
   const { keywords, response } = req.body;
 
   if (!keywords || !response) {
-    console.log("Invalid data received:", req.body); // Log the received data
     return res.status(400).json({ error: 'Keywords and response are required' });
   }
 
@@ -50,18 +49,18 @@ app.post('/api/learn', express.json(), (req, res) => {
   };
 
   corpus.push(newEntry);
-  console.log("New entry added to corpus:", newEntry); // Log the new entry
 
-  // Update the corpus.json file
+  // Update the local JSON file to save learning data
   try {
     fs.writeFileSync(corpusPath, JSON.stringify(corpus, null, 2));
-    console.log("Corpus successfully updated in corpus.json"); // Log success
+    console.log("Corpus successfully updated in corpus.json");
     res.status(201).json(newEntry);
   } catch (error) {
-    console.error("Error writing to corpus.json:", error); // Log any write errors
+    console.error("Error writing to corpus.json:", error);
     res.status(500).json({ error: 'Failed to update corpus file' });
   }
 });
+
 
 
 
