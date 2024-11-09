@@ -22,18 +22,18 @@ function SorrenChatbot() {
     { label: "Help with coding", prompt: "help with coding" },
     { label: "What's your name", prompt: "what's your name" },
     { label: "UX research", prompt: "UX research" },
-    { label: "City of Vancouver", prompt: "tell me about your City of Vancouver " },
-    { label: "Smart drive test", prompt: "tell me about your smart drive test" },
-    { label: "Bakery website", prompt: "tell me about your bakery website" },
-    { label: "Travel app", prompt: "tell me about your UX process with the travel app" },
-    { label: "Student webpage creator", prompt: "tell me about your student webpage creator" },
-    { label: "Facemask detection", prompt: "tell me about your facemask detection project" },
-    { label: "Sleep chatbot", prompt: "tell me about your sleep chatbot project" },
-    { label: "Map app", prompt: "tell me about your map app project" },
-    { label: "Virtual pet", prompt: "tell me about your virtual pet project" },
-    { label: "Tell me about your past job experience", prompt: "tell me about your work history experience" },
+    { label: "City of Vancouver", prompt: "City of Vancouver " },
+    { label: "Smart drive test", prompt: "smart drive test" },
+    { label: "Bakery website", prompt: " bakery website" },
+    { label: "Travel app", prompt: "travel app" },
+    { label: "Student webpage creator", prompt: "student webpage creator" },
+    { label: "Facemask detection", prompt: "facemask detection" },
+    { label: "Sleep chatbot", prompt: "sleep chatbot" },
+    { label: "Map app", prompt: " map app" },
+    { label: "Virtual pet", prompt: "virtual pet" },
+    { label: "Tell me about your past job experience", prompt: "tell me about your past job experience" },
     { label: "What do you do for a living", prompt: "what do you do for a living" },
-    { label: "Tell me about your education", prompt: "did you study at Simon Fraser University" }
+    { label: "Tell me about your education", prompt: "tell me about your education" }
   ];
 
   // Function to send a custom prompt

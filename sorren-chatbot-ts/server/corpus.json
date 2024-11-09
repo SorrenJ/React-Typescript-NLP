@@ -1,6 +1,6 @@
 [
 {
-  "priority":2,
+  "priority":1,
   "keywords": ["hello", "hi", "greetings", "howdy"],
   "responses": [
     "Hey! What’s on your mind today?",
@@ -10,7 +10,7 @@
   ]
 },
 {
-  "priority": 5,
+  "priority": 1,
   "keywords": ["coding", "debugging", "project", "technical"],
   "responses": [
     "Debugging can be a bit like detective work. Sometimes it’s all about patience and persistence.",
@@ -21,8 +21,8 @@
   ]
 },
 {
-  "priority": 9,
-  "keywords": ["virtual pet", "pet", "app", "game", "tone detection", "tone", "detection", "sentiment analysis", "sentiment", "analysis", "project"],
+  "priority": 2,
+  "keywords": ["virtual pet", "game", "tone detection", "tone", "detection", "sentiment analysis", "sentiment", "analysis", "project"],
   "responses": [
     "The Virtual Pet Web Application lets users interact with a pet by feeding, cleaning, and training it. It even detects your tone using sentiment analysis, creating a responsive experience.",
     "This project is all about creating a fun, interactive experience. Users can care for their virtual pets and see the effects in real-time.",
@@ -32,8 +32,8 @@
   ]
 },
 {
-  "priority": 9,
-  "keywords": ["map app", "map", "app", "collaborative maps", "collaborative", "maps", "listing", "Leaflet", "points", "project"],
+  "priority": 4,
+  "keywords": ["map app",  "collaborative maps", "collaborative", "maps", "listing", "Leaflet", "points", "project"],
   "responses": [
     "The Map Listing Web Application allows users to collaboratively create maps with multiple points of interest. It's great for organizing location-based info.",
     "Maps are a great way to visually organize information, and this project takes it a step further with collaboration.",
@@ -43,7 +43,7 @@
   ]
 },
 {
-  "priority": 9,
+  "priority": 4,
   "keywords": ["sleep chatbot", "sleep", "wellness", "chatbot", "sleep assistant", "assistant", "project"],
   "responses": [
     "The Sleep Wellness Chatbot is designed to assist users with sleep-related guidance through a chat interface.",
@@ -54,18 +54,18 @@
   ]
 },
 {
-  "priority": 9,
+  "priority": 4,
   "keywords": ["facemask detection", "facemask", "mask", "detection", "YOLO", "COVID-19", "mask app", "app", "project"],
   "responses": [
     "The Facemask Detection App was created during COVID-19 to detect if someone is wearing a mask using their phone’s camera.",
     "Real-time mask detection was a timely solution during COVID-19, and this app made it accessible.",
     "Mask detection technology like this can be really helpful for public health and safety.",
-    "Using YOLOv2 for detecting facemasks was a creative way to contribute to health efforts.",
+    "Using YOLOv1 for detecting facemasks was a creative way to contribute to health efforts.",
     "A helpful tool during COVID-19, this app leveraged mobile technology for public safety."
   ]
 },
 {
-  "priority": 9,
+  "priority": 4,
   "keywords": ["student webpage creator", "student", "webpage", "creator", "profile generator", "profile", "generator", "dynamic profile", "dynamic", "single-page app", "single-page", "SFU", "project"],
   "responses": [
     "The SFU Student Webpage Creator helps generate student profile webpages with features like saving, downloading, and text editing.",
@@ -76,7 +76,7 @@
   ]
 },
 {
-  "priority": 9,
+  "priority": 4,
   "keywords": ["travel app", "travel", "prototype", "Figma prototype", "Figma", "user testing", "testing", "UX research", "UX", "research", "project"],
   "responses": [
     "The Travel App Figma Prototype was designed to address user pain points in the travel experience.",
@@ -87,8 +87,8 @@
   ]
 },
 {
-  "priority": 9,
-  "keywords": ["bakery website", "bakery", "website", "redesign", "user experience", "experience", "UX", "project"],
+  "priority": 4,
+  "keywords": ["bakery website", "bakery",  "redesign", "user experience", "experience", "UX", "project"],
   "responses": [
     "The Bakery Website Redesign improved user navigation, making it easy for customers to find and purchase items.",
     "Designing for a bakery website means focusing on an enjoyable browsing experience.",
@@ -98,7 +98,7 @@
   ]
 },
 {
-  "priority": 9,
+  "priority": 4,
   "keywords": ["smart drive test", "smart", "drive", "test", "driving platform", "driving", "platform", "learning platform", "learning", "course", "website", "project"],
   "responses": [
     "The Smart Drive Test project is a learning platform that teaches driving techniques and supports new drivers.",
@@ -109,7 +109,7 @@
   ]
 },
 {
-  "priority": 9,
+  "priority": 4,
   "keywords": ["City of Vancouver", "City", "Vancouver", "voting website", "voting", "website", "wireframes", "city project", "project"],
   "responses": [
     "For the City of Vancouver, I worked on a voting website project focusing on usability and accessibility.",
@@ -120,7 +120,7 @@
   ]
 },
 {
-  "priority": 9,
+  "priority": 4,
   "keywords": ["profile helper", "profile", "helper", "student profile", "student", "Adobe Experience Manager", "Adobe", "Experience", "Manager", "automation", "project"],
   "responses": [
     "The Profile Helper automated the creation of student profiles, streamlining the process.",
@@ -131,7 +131,7 @@
   ]
 },
 {
-  "priority": 5,
+  "priority": 1,
   "keywords": ["UX research", "research", "user stories", "stories", "usability testing", "usability", "testing", "information architecture", "information", "architecture", "project"],
   "responses": [
     "UX research is at the heart of my projects, focusing on improving the user experience.",
@@ -142,7 +142,7 @@
   ]
 },
 {
-  "priority": 5,
+  "priority": 1,
   "keywords": ["portfolio", "projects", "deployment", "showcase", "tech stack", "tech", "stack"],
   "responses": [
     "I’m constantly updating my portfolio to showcase projects and skills.",
@@ -185,7 +185,7 @@
   ]
 },
 {
-  "priority": 9,
+  "priority": 4,
   "keywords": [
     "what's your favorite thing to do", "whats ur fav thing to do", "fav thing to do", "what do u like doing", 
     "what do you enjoy", "what’s your passion", "passion", "what’s your hobby", "hobbies", "hobby", "do you have any hobbies", 
@@ -217,7 +217,7 @@
 }
 ,
 {
-  "priority": 5,
+  "priority": 1,
   "keywords": ["help with coding", "help", "coding", "code", "assist", "programming", "help me code"],
   "responses": [
     "Absolutely! What are you working on? I’d love to see if I can help.",
@@ -228,7 +228,7 @@
   ]
 },
 {
-  "priority": 9,
+  "priority": 4,
   "keywords": ["tell me about yourself", "tell me abt urself", "tell me about urself", "tell me abot youself", "tell me abt u", 
     "about yourself", "abt urself", "tell me who u r", "who are you", "who r u", "who're you", "who is this", 
     "who is talking", "who am I talking to", "yourself", "urself", "your self", "ur self", "ur background", 
@@ -303,7 +303,7 @@
   ]
 },
 {
-  "priority": 5,
+  "priority": 1,
   "keywords": ["how do you relax",  "relax", "free time", "free", "time", "when not coding",  "hobbies"],
   "responses": [
     "When I’m not coding, I enjoy exploring new tech trends or checking out other developers’ projects for inspiration.",
@@ -314,7 +314,7 @@
   ]
 },
 {
-  "priority": 9,
+  "priority": 50,
   "keywords": [
     "tell me about your past job experience", "what jobs have you done", "describe your job history", 
     "past job experience", "work experience", "professional experience", "what roles have you held", 
@@ -332,13 +332,13 @@
     "I recently worked as a Web Developer at Cybersalt Consulting Ltd., where I developed multiple business websites, focusing on improving SEO, UI, and UX, as well as optimizing responsiveness and performance.",
     "One of my past roles was a Web Designer and Marketing Communications Specialist at Simon Fraser University, where I managed web content, designed web banners, and optimized graduate student profile performance.",
     "I have experience as a Research Assistant with SFU’s Career & Volunteer Services, where I researched alumni careers and managed their career website.",
-    "My recent job experiences have been focused on web development and design, including work with JavaScript, React, HTML5, CSS, and backend technologies like PostgreSQL.",
+    "My recent job experiences have been focused on web development and design, including work with JavaScript, React, HTML1, CSS, and backend technologies like PostgreSQL.",
     "In my role at Cybersalt Consulting Ltd., I collaborated through agile development processes, handled troubleshooting, and customized websites with a focus on enhancing user experience."
   ]
 },
 
 {
-  "priority": 9,
+  "priority":8,
   "keywords": [
 "profession", "proffession", "proffesion", "ocupation", "occupation", "emplyment", "employment", "do u have a job", 
     "do you have job", "looking for work", "looking for wrk", "looking for a job", "what kind of work do you do", 
@@ -370,9 +370,9 @@
   ]
 },
 {
-  "priority": 9,
+  "priority": 50,
   "keywords": [
-    "tell me about your education", "tell me about ur education", "tell me abut your education", "what’s your educational background", 
+    "school", "tell me about your education", "tell me about ur education", "tell me abut your education", "what’s your educational background", 
     "wht’s your educational background", "whats ur educational background", "where did you study", "where did u study", 
     "education history", "educational history", "describe your education", "descibe your education", "academic background", 
     "academic backround", "what degrees do you have", "what degress do u have", "where did you go to school", 
@@ -412,7 +412,7 @@
 },
 
 {
-  "priority": 5,
+  "priority": 1,
   "keywords": [
     "tell me about your family", "do you have siblings", "any brothers or sisters", "who is Noriko", 
     "tell me about Noriko", "family members", "do you have family", "who's in your family", 
@@ -439,7 +439,7 @@
   ]
 },
 {
-  "priority": 5,
+  "priority": 1,
   "keywords": [
     "favorite video games", "do you play games", "what video games do you like", "favorite games", 
     "what games do you play", "do you play video games", "what’s your favorite game", "what was your first game", 
