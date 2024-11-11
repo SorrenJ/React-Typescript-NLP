@@ -124,6 +124,21 @@ button:hover {
   border-radius: 30px 30px 30px 40px;
 }
 
+
+
+/* Wrapper for bot message with profile */
+.bot-message-container {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+}
+
+/* Adjust bot message alignment */
+.bot-message-content {
+  flex-grow: 1;
+}
+
+
 /* Tail for user message */
 .user-message::before {
   content: '';
@@ -167,10 +182,30 @@ button:hover {
   filter: drop-shadow(0 0 25px white);
   animation: flicker 1.5s infinite;
 }
+.bot-profile-pic {
+  width: 180px;
+  height: 180px;
+  /* background-color: grey; */
+  border-radius: 50%;
+  background-image: url('assets/MeditatingProfile1.PNG'); /* Replace with the actual path */
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 30px #e606c8);
+  animation: holographicGradient 1s infinite;
+  margin-left: -75px;
+  position: absolute;
+  margin-top: 5%;
+  z-index:-2;
+}
+
 
 /* Styling for different screen sizes */
 @media (min-width: 768px) {
- 
+ /* Profile image for bot messages */
+
+
  
   .user-message,
   .bot-message {
@@ -205,6 +240,13 @@ button:hover {
   }
 }
 
+@media (max-width: 768px) {
+
+.bot-profile-pic {
+  display:none;
+  }
+  
+}
 /* Hover animations */
 @keyframes flicker {
   0%, 100% { filter: drop-shadow(0 0 25px white); }

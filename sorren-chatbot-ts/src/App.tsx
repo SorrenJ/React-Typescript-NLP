@@ -87,7 +87,7 @@ function SorrenChatbot() {
   // Initial message with typing effect
   useEffect(() => {
     if (!initialMessageSent.current) {
-      simulateTyping("Hi I'm Sorren, let's chat!");
+      simulateTyping("Hi I'm Sorren or rather his AI model, let's chat! Ask me anything or select a prompt below. I may make mistakes so be sure to fact check or ask my creator.");
       initialMessageSent.current = true;
     }
   }, []);
@@ -124,33 +124,45 @@ function SorrenChatbot() {
   };
 
   return (
-    <div className="chat-container">
-      <div>
-        {messages.map((msg, index) => (
-          <p
-            key={index}
-            className={msg.sender === 'user' ? 'user-message' : 'bot-message'}
-            style={{ fontSize: msg.fontSize }}
-          >
-            {msg.sender === 'user' ? 'You: ' : 'Sorren: '}
-            {msg.text}
-          </p>
-        ))}
-        {typingMessage && (
-          <p className="bot-message" style={{ fontSize: getDynamicFontSize(typingMessage) }}>
-            Sorren: {typingMessage}
-          </p>
+<div className="chat-container">
+  <div>
+    {messages.map((msg, index) => (
+      <div
+        key={index}
+        className={msg.sender === 'sorren' ? 'bot-message-container' : ''}
+      >
+        {msg.sender === 'sorren' && (
+          <div className="bot-profile-pic"></div>
         )}
+        <p
+          className={`${msg.sender === 'user' ? 'user-message' : 'bot-message bot-message-content'}`}
+          style={{ fontSize: msg.fontSize }}
+        >
+          {msg.sender === 'user' ? 'You: ' : 'Sorren: '}
+          {msg.text}
+        </p>
       </div>
-      <span className="input-container">
-        <input
-          type="text"
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-          onKeyPress={(e) => e.key === 'Enter' && handleUserMessage()}
-        />
-        <button type="submit" onClick={handleUserMessage}>Send</button>
-      </span>
+    ))}
+    {typingMessage && (
+      <div className="bot-message-container">
+        <div className="bot-profile-pic"></div>
+        <p className="bot-message bot-message-content" style={{ fontSize: getDynamicFontSize(typingMessage) }}>
+          Sorren: {typingMessage}
+        </p>
+      </div>
+    )}
+  </div>
+  <br></br>
+  <br></br>
+  <span className="input-container">
+    <input
+      type="text"
+      value={userInput}
+      onChange={(e) => setUserInput(e.target.value)}
+      onKeyPress={(e) => e.key === 'Enter' && handleUserMessage()}
+    />
+    <button type="submit" onClick={handleUserMessage}>Send</button>
+  </span>
     
     
     
