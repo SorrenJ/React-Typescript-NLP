@@ -69,7 +69,7 @@ function SorrenChatbot() {
   // Simulate typing effect
   const simulateTyping = (text: string) => {
     setTypingMessage('');
-    let index = 0;
+    let index = -1;
 
     const typingInterval = setInterval(() => {
       if (index < text.length) {
