@@ -28,8 +28,6 @@ function SorrenChatbot() {
 
   const prompts: Prompt[] = [
     { label: "Tell me about yourself", prompt: "tell me about yourself" },
-    { label: "Help with coding", prompt: "help with coding" },
-    { label: "What's your name", prompt: "what's your name" },
     { label: "Tell me about your past job experience", prompt: "tell me about your past job experience" },
     { label: "What do you do for a living", prompt: "what do you do for a living" },
     { label: "Tell me about your education", prompt: "tell me about your education" }
@@ -143,7 +141,38 @@ function SorrenChatbot() {
           />
           <button type="submit" onClick={handleUserMessage}>Send</button>
         </span>
-      </div>
+      
+        {/* Toggle buttons for visibility */}
+        <div className="toggle-buttons">
+          <button onClick={() => setShowPrompts(!showPrompts)}>
+            {showPrompts ? 'Hide' : 'Show'} Prompts
+          </button>
+          <button onClick={() => setShowProjectPrompts(!showProjectPrompts)}>
+            {showProjectPrompts ? 'Hide' : 'Show'} Project Prompts
+          </button>
+        </div>
+
+        {/* Conditionally render prompt buttons */}
+        {showPrompts && (
+          <div className="buttons-container prompts">
+            {prompts.map((item, index) => (
+              <button key={index} onClick={() => sendPrompt(item.prompt)}>
+                {item.label}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {showProjectPrompts && (
+          <div className="buttons-container project-prompts">
+            {projectPrompts.map((item, index) => (
+              <button key={index} onClick={() => sendPrompt(item.prompt)}>
+                {item.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </div> {/* Close .chat-container div */}
     </>
   );
 }
