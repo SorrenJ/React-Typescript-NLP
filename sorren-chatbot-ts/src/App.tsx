@@ -56,7 +56,7 @@ function SorrenChatbot() {
 
   // Calculate font size based on character length
   const getDynamicFontSize = (text: string) => {
-    const baseSize = 1.2; // Base font size for adjustments
+    const baseSize = 2; // Base font size for adjustments
     let fontSize;
     if (text.length > 150) fontSize = `${baseSize - 0.4}rem`; // Smaller font for long text
     else if (text.length > 100) fontSize = `${baseSize - 0.2}rem`; // Medium for mid-length text
