@@ -1,22 +1,39 @@
 const express = require('express');
-const fs = require('fs');
-const path = require('path');
+const { connectToDB } = require('./mongoSetup'); // Import the MongoDB setup
 const OpenAI = require('openai');
 require('dotenv').config();
+
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const app = express();
 app.use(express.json());
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+let corpus = [];
+
+// Fetch the corpus from MongoDB
+async function fetchCorpus() {
+  try {
+    const db = await connectToDB(); // Get the connected database
+    const collection = db.collection("corpus"); // Replace with your collection name
+    corpus = await collection.find().sort({ priority: -1 }).toArray();
+    console.log("Corpus loaded from MongoDB!");
+  } catch (error) {
+    console.error("Error fetching corpus from MongoDB:", error.message);
+    throw error;
+  }
+}
+
+// Middleware to ensure the corpus is loaded
+app.use(async (req, res, next) => {
+  if (corpus.length === 0) {
+    try {
+      await fetchCorpus();
+    } catch (error) {
+      return res.status(500).json({ error: "Failed to load corpus from MongoDB" });
+    }
+  }
+  next();
 });
-
-// Load corpus data from local JSON file
-const corpusPath = path.join(__dirname, 'corpus.json');
-let corpus = JSON.parse(fs.readFileSync(corpusPath, 'utf-8'));
-
-// Sort corpus by priority (higher priorities first)
-corpus = corpus.sort((a, b) => b.priority - a.priority);
 
 // Function to find the best match based on priority
 function findBestMatch(input) {
@@ -24,7 +41,6 @@ function findBestMatch(input) {
     const lowerInput = input.toLowerCase();
     const matchedKeyword = entry.keywords.find(keyword => lowerInput.includes(keyword.toLowerCase()));
     if (matchedKeyword) {
-      // If a match is found with high priority, return a random response from that entry
       return entry.responses[Math.floor(Math.random() * entry.responses.length)];
     }
   }
@@ -34,11 +50,8 @@ function findBestMatch(input) {
 // Endpoint to handle prioritized matching with OpenAI fallback
 app.post('/api/generate-response', async (req, res) => {
   const { input } = req.body;
-
-  // Check if input matches prioritized keywords in corpus
   let responseText = findBestMatch(input);
 
-  // If no match is found, use OpenAI as a fallback
   if (!responseText) {
     const fallbackPrompt = `User asked: "${input}". Respond in a helpful and friendly manner as if you are Sorren.`;
     try {
@@ -50,13 +63,14 @@ app.post('/api/generate-response', async (req, res) => {
       });
       responseText = openaiResponse.choices[0].message.content.trim();
     } catch (error) {
-      console.error("Error generating response with OpenAI:", error);
-      return res.status(500).json({ error: "Failed to generate a response" });
+      console.error("Error generating response with OpenAI:", error.message);
+      responseText = "Sorry, I couldn't process your request. Please try again later.";
     }
   }
 
   res.json({ response: responseText });
 });
 
+// Start the server
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
