@@ -318,7 +318,7 @@ const jsonData = [
     ]
   },
   {
-    "priority": 50,
+    "priority": 9,
     "keywords": [
       "tell me about your past job experience", "what jobs have you done", "describe your job history", 
       "past job experience", "work experience", "professional experience", "what roles have you held", 
@@ -374,7 +374,7 @@ const jsonData = [
     ]
   },
   {
-    "priority": 50,
+    "priority": 9,
     "keywords": [
       "school", "tell me about your education", "tell me about ur education", "tell me abut your education", "what’s your educational background", 
       "wht’s your educational background", "whats ur educational background", "where did you study", "where did u study", 
