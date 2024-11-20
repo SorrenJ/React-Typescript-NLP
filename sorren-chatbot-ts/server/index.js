@@ -35,6 +35,9 @@ app.use(async (req, res, next) => {
   next();
 });
 
+// Sort corpus by priority (higher priorities first)
+corpus = corpus.sort((a, b) => b.priority - a.priority);
+
 // Function to find the best match based on priority
 function findBestMatch(input) {
   for (let entry of corpus) {

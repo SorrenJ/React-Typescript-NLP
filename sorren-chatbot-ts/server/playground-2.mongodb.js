@@ -2,7 +2,7 @@ use("myCorpus"); // Replace with your database name
 
 const jsonData = [
   {
-    "priority": 1,
+    "priority":1,
     "keywords": ["hello", "hi", "greetings", "howdy"],
     "responses": [
       "Hey! What’s on your mind today?",
@@ -10,10 +10,8 @@ const jsonData = [
       "Hi there! Ready to dive into anything specific?",
       "Hello there! Feel free to start with anything you'd like to discuss."
     ]
-  
-},
-
-{
+  },
+  {
     "priority": 1,
     "keywords": ["coding", "debugging", "project", "technical"],
     "responses": [
@@ -318,7 +316,7 @@ const jsonData = [
     ]
   },
   {
-    "priority": 9,
+    "priority": 50,
     "keywords": [
       "tell me about your past job experience", "what jobs have you done", "describe your job history", 
       "past job experience", "work experience", "professional experience", "what roles have you held", 
@@ -374,7 +372,7 @@ const jsonData = [
     ]
   },
   {
-    "priority": 9,
+    "priority": 50,
     "keywords": [
       "school", "tell me about your education", "tell me about ur education", "tell me abut your education", "what’s your educational background", 
       "wht’s your educational background", "whats ur educational background", "where did you study", "where did u study", 
@@ -471,8 +469,15 @@ const jsonData = [
       "Right now, I'm diving into *Pokemon Brilliant Diamond* and having a great time revisiting that world!"
     ]
   }
+  
+  
 ];
 
+// Insert the JSON data into the collection
 db.getCollection("myCorpusCollection").insertMany(jsonData); // Replace with your collection name
 
-db.getCollection("myCorpusCollection").find(); // Replace "yourCollectionName" with your actual collection name
+// Verify insertion by counting documents
+print("Number of documents inserted:", db.getCollection("myCorpusCollection").countDocuments());
+
+// Optional: View inserted documents
+db.getCollection("myCorpusCollection").find().toArray();
