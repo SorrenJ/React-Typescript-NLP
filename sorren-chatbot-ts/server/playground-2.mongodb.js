@@ -335,5 +335,8 @@ jsonData.forEach((doc, index) => {
 });
 
 
+
 // Optional: View the inserted documents
 db.myCorpusCollection.find().pretty();
+
+db.corpus.createIndex({ keywords: "text" });

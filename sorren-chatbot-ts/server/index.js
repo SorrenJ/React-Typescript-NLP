@@ -20,15 +20,23 @@ let corpus = [];
 // Fetch the corpus from MongoDB
 async function fetchCorpus() {
   try {
-    const db = await connectToDB(); // Get the connected database
-    const collection = db.collection("corpus"); // Replace with your collection name
-    corpus = await collection.find().sort({ priority: -1 }).toArray();
-    console.log("Corpus loaded from MongoDB!");
+    const db = await connectToDB();
+    const collection = db.collection("corpus");
+    const rawCorpus = await collection.find().sort({ priority: -1 }).toArray();
+
+    // Normalize the corpus
+    corpus = rawCorpus.map(entry => ({
+      ...entry,
+      keywords: entry.keywords.map(keyword => keyword.toLowerCase())
+    }));
+
+    console.log("Corpus loaded and normalized from MongoDB!");
   } catch (error) {
     console.error("Error fetching corpus from MongoDB:", error.message);
     throw error;
   }
 }
+
 
 // Middleware to ensure the corpus is loaded
 app.use(async (req, res, next) => {
@@ -47,15 +55,34 @@ corpus = corpus.sort((a, b) => b.priority - a.priority);
 
 // Function to find the best match based on priority
 function findBestMatch(input) {
-  for (let entry of corpus) {
-    const lowerInput = input.toLowerCase();
-    const matchedKeyword = entry.keywords.find(keyword => lowerInput.includes(keyword.toLowerCase()));
-    if (matchedKeyword) {
-      return entry.responses[Math.floor(Math.random() * entry.responses.length)];
+  input = input.toLowerCase(); // Normalize input
+
+  let bestMatch = null;
+  let highestScore = 0;
+
+  for (const entry of corpus) {
+    let score = 0;
+
+    // Check each keyword
+    for (const keyword of entry.keywords) {
+      if (input === keyword) {
+        score += 10; // Exact match
+      } else if (input.includes(keyword)) {
+        score += 5; // Partial match
+      }
+    }
+
+    score += entry.priority * 2; // Add priority weight
+
+    if (score > highestScore) {
+      highestScore = score;
+      bestMatch = entry;
     }
   }
-  return null;
+
+  return bestMatch ? bestMatch.responses[Math.floor(Math.random() * bestMatch.responses.length)] : null;
 }
+
 
 // Endpoint to handle prioritized matching with OpenAI fallback
 app.post(`/api/generate-response`, async (req, res) => {
