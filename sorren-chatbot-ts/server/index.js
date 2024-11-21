@@ -5,9 +5,14 @@ const cors = require('cors');
 const app = express();
 require('dotenv').config();
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-// Enable CORS for all origins
-app.use(cors());
+
+app.use(cors({
+  origin: '*', // Allow all origins
+  methods: ['GET', 'POST'], // Allow these HTTP methods
+}));
 
 // Middleware to parse JSON
 app.use(express.json());
