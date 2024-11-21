@@ -4,6 +4,8 @@ import './SorrenChatbot.css';
 import './petals.css';
 import ApiComponent from './api/apiClient';
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+
 interface Message {
   sender: 'user' | 'sorren';
   text: string;
@@ -95,11 +97,13 @@ function SorrenChatbot() {
 
 
   const sendPrompt = async (prompt: string) => {
+   
+
     const userMessage: Message = { sender: 'user', text: prompt, fontSize: getDynamicFontSize(prompt) };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
   
     try {
-      const response = await axios.post<{ response: string }>('/api/generate-response', { input: prompt });
+      const response = await axios.post<{ response: string }>(`${API_BASE_URL}/api/generate-response`, { input: prompt });
       simulateTyping(response.data.response);
     } catch (error) {
       console.error("Error fetching response:", error);
@@ -114,7 +118,7 @@ function SorrenChatbot() {
     setMessages((prevMessages) => [...prevMessages, userMessage]);
 
     try {
-      const response = await axios.post<{ response: string }>('/api/generate-response', { input: userInput });
+      const response = await axios.post<{ response: string }>(`${API_BASE_URL}/api/generate-response`, { input: userInput });
       simulateTyping(response.data.response);
     } catch (error) {
       console.error("Error fetching response:", error);

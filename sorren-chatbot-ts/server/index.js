@@ -4,9 +4,7 @@ const OpenAI = require('openai');
 const cors = require('cors');
 const app = express();
 require('dotenv').config();
-
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
-
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 app.use(cors({
@@ -60,7 +58,7 @@ function findBestMatch(input) {
 }
 
 // Endpoint to handle prioritized matching with OpenAI fallback
-app.post('/api/generate-response', async (req, res) => {
+app.post(`/api/generate-response`, async (req, res) => {
   const { input } = req.body;
   let responseText = findBestMatch(input);
 
@@ -83,7 +81,7 @@ app.post('/api/generate-response', async (req, res) => {
   res.json({ response: responseText });
 });
 
-app.get('/api/backend-endpoint', (req, res) => {
+app.get(`/api/backend-endpoint`, (req, res) => {
   res.json({ message: 'Hello from the backend!' });
   console.log("backend endpoint sucessful")
 });
