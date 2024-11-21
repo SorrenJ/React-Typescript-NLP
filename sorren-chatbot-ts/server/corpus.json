@@ -10,7 +10,7 @@
   ]
 },
 {
-  "priority": 1,
+  "priority": 4,
   "keywords": ["coding", "debugging", "project", "technical"],
   "responses": [
     "Debugging can be a bit like detective work. Sometimes it’s all about patience and persistence.",
@@ -21,8 +21,8 @@
   ]
 },
 {
-  "priority": 2,
-  "keywords": ["virtual pet", "game", "tone detection", "tone", "detection", "sentiment analysis", "sentiment", "analysis", "project"],
+  "priority": 8,
+  "keywords": ["virtual pet", "tone detection", "tone", "detection", "sentiment analysis", "sentiment", "analysis", "project"],
   "responses": [
     "The Virtual Pet Web Application lets users interact with a pet by feeding, cleaning, and training it. It even detects your tone using sentiment analysis, creating a responsive experience.",
     "This project is all about creating a fun, interactive experience. Users can care for their virtual pets and see the effects in real-time.",
@@ -76,7 +76,7 @@
   ]
 },
 {
-  "priority": 4,
+  "priority": 8,
   "keywords": ["travel app", "travel", "prototype", "Figma prototype", "Figma", "user testing", "testing", "UX research", "UX", "research", "project"],
   "responses": [
     "The Travel App Figma Prototype was designed to address user pain points in the travel experience.",
@@ -412,7 +412,7 @@
 },
 
 {
-  "priority": 1,
+  "priority": 50,
   "keywords": [
     "tell me about your family", "do you have siblings", "any brothers or sisters", "who is Noriko", 
     "tell me about Noriko", "family members", "do you have family", "who's in your family", 
@@ -439,7 +439,7 @@
   ]
 },
 {
-  "priority": 1,
+  "priority": 40,
   "keywords": [
     "favorite video games", "do you play games", "what video games do you like", "favorite games", 
     "what games do you play", "do you play video games", "what’s your favorite game", "what was your first game", 
