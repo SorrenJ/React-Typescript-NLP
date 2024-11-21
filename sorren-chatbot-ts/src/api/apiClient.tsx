@@ -20,7 +20,7 @@ const ApiComponent = () => {
       });
   }, []);
 
-  return <div>Check the console for API data!</div>;
+  return <div>Chat with Sorren Bot!</div>;
 };
 
 export default ApiComponent;
