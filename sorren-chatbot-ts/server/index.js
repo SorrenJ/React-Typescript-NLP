@@ -1,11 +1,15 @@
 const express = require('express');
 const { connectToDB } = require('./mongoSetup'); // Import the MongoDB setup
 const OpenAI = require('openai');
+const cors = require('cors');
+const app = express();
 require('dotenv').config();
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// Enable CORS for all origins
+app.use(cors());
 
-const app = express();
+// Middleware to parse JSON
 app.use(express.json());
 
 let corpus = [];
@@ -73,6 +77,12 @@ app.post('/api/generate-response', async (req, res) => {
 
   res.json({ response: responseText });
 });
+
+app.get('/api/backend-endpoint', (req, res) => {
+  res.json({ message: 'Hello from the backend!' });
+  console.log("backend endpoint sucessful")
+});
+
 
 // Start the server
 const PORT = 5000;

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './SorrenChatbot.css';
 import './petals.css';
+import ApiComponent from './api/apiClient';
 
 interface Message {
   sender: 'user' | 'sorren';
@@ -124,7 +125,10 @@ function SorrenChatbot() {
   };
 
   return (
+   
 <div className="chat-container">
+<ApiComponent />
+  
   <div>
     {messages.map((msg, index) => (
       <div
