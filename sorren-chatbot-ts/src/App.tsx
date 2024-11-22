@@ -16,21 +16,18 @@ function SorrenChatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [userInput, setUserInput] = useState<string>('');
   const [typingMessage, setTypingMessage] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(true); // State for loading screen
 
    // Visibility toggles for prompts
    const [showPrompts, setShowPrompts] = useState<boolean>(false);
    const [showProjectPrompts, setShowProjectPrompts] = useState<boolean>(false);
- 
-   // Prevent initial message from re-triggering
 
   const initialMessageSent = useRef(false);
-
 
   interface Prompt {
     label: string;
     prompt: string;
   }
-
   const prompts: Prompt[] = [
     { label: "Tell me about yourself", prompt: "tell me about yourself" },
     { label: "Tell me about your past job experience", prompt: "tell me about your past job experience" },
@@ -53,12 +50,17 @@ function SorrenChatbot() {
 
 
 
+  useEffect(() => {
+    // Simulate a loading delay for 2 seconds
+    const loadingTimeout = setTimeout(() => {
+      setLoading(false); // Hide loading screen after timeout
+    }, 2000);
 
+    return () => clearTimeout(loadingTimeout);
+  }, []);
 
-
-
-  // Calculate font size based on character length
-  const getDynamicFontSize = (text: string) => {
+   // Calculate font size based on character length
+   const getDynamicFontSize = (text: string) => {
     const baseSize = 2; // Base font size for adjustments
     let fontSize;
     if (text.length > 150) fontSize = `${baseSize - 0.4}rem`; // Smaller font for long text
@@ -69,28 +71,30 @@ function SorrenChatbot() {
     return fontSize;
   };
 
-  // Simulate typing effect
+
   const simulateTyping = (text: string) => {
     setTypingMessage('');
     let index = -1;
-
+  
+    const fontSize = getDynamicFontSize(text); // Calculate font size for the final message
+  
     const typingInterval = setInterval(() => {
       if (index < text.length) {
         setTypingMessage((prev) => (prev || '') + text[index]);
         index++;
       } else {
         clearInterval(typingInterval);
-        const newMessage: Message = { sender: 'sorren', text, fontSize: getDynamicFontSize(text) };
+        const newMessage: Message = { sender: 'sorren', text, fontSize }; // Add fontSize to Sorren's message
         setMessages((prevMessages) => [...prevMessages, newMessage]);
         setTypingMessage(null);
       }
     }, 50);
   };
+  
 
-  // Initial message with typing effect
   useEffect(() => {
     if (!initialMessageSent.current) {
-      simulateTyping("Hi I'm Sorren or rather his AI model, let's chat! Ask me anything or select a prompt below. I may make mistakes so be sure to fact check or ask my creator.");
+      simulateTyping("Hi I'm Sorren or rather his AI model, let's chat!");
       initialMessageSent.current = true;
     }
   }, []);
@@ -128,12 +132,20 @@ function SorrenChatbot() {
     setUserInput('');
   };
 
+  if (loading) {
+    // Render loading screen while the page is loading
+    return (
+      <div className="loading-screen">
+        <div className="loading-spinner"></div>
+        <p>Loading SorrenChatbot...</p>
+      </div>
+    );
+  }
+
   return (
-   
-<div className="chat-container">
-<ApiComponent />
-  
-  <div>
+    <div className="chat-container">
+      <ApiComponent />
+      <div>
     {messages.map((msg, index) => (
       <div
         key={index}
@@ -205,6 +217,9 @@ function SorrenChatbot() {
             ))}
           </div>
         )}
+    
+    
+    
     
     
     
