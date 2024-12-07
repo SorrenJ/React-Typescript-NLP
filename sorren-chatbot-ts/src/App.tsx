@@ -3,6 +3,8 @@ import axios from 'axios';
 import './SorrenChatbot.css';
 import './petals.css';
 import './navbar.css';
+import logo from './logo.svg';
+
 import ApiComponent from './api/apiClient';
 
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
@@ -149,8 +151,8 @@ function SorrenChatbot() {
     
         <div className="home_nav">
           <div className="home_nav-item">
-            <div className="home_icon"><a href="index.html">
-            <img src="./logo.svg" alt="Logo" /></a>
+            <div className="home_icon"><a href="https://sorrenj.github.io/index.html#project">
+            <img src={logo} alt="Logo" /></a>
     
       
              
