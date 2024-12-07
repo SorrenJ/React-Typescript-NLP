@@ -147,7 +147,14 @@ function SorrenChatbot() {
 
   return (
     <div className="chat-container">
-      
+          <div id="petals">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
     
         <div className="home_nav">
           <div className="home_nav-item">
