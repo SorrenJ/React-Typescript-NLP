@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './SorrenChatbot.css';
 import './petals.css';
+import './navbar.css';
 import ApiComponent from './api/apiClient';
 
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
@@ -144,6 +145,31 @@ function SorrenChatbot() {
 
   return (
     <div className="chat-container">
+      
+    
+        <div className="home_nav">
+          <div className="home_nav-item">
+            <div className="home_icon"><a href="index.html">
+            <img src="./logo.svg" alt="Logo" /></a>
+    
+      
+             
+            </div>
+          </div>
+    
+          <div className="home_nav-item">
+            <div id="myLinks" className="nav">
+              
+            </div>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+      
+      
       <ApiComponent />
       <div>
     {messages.map((msg, index) => (

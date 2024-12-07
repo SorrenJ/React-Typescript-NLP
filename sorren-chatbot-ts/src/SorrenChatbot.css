@@ -1,6 +1,17 @@
 /* Global styling */
 
+/* mobile view */
+@media (max-width: 768px) {
 
+  .bot-profile-pic {
+    display:none;
+    }
+    .user-message,
+    .bot-message {
+    font-size:0.5em;
+    }
+
+  }
 
 .loading-screen {
   position: fixed;
@@ -281,13 +292,7 @@ button:hover {
   }
 }
 
-@media (max-width: 768px) {
 
-.bot-profile-pic {
-  display:none;
-  }
-  
-}
 /* Hover animations */
 @keyframes flicker {
   0%, 100% { filter: drop-shadow(0 0 25px white); }
@@ -301,3 +306,4 @@ button:hover {
   75% { color: #ffffff; text-shadow: 0 0 5px #ffffff, 0 0 10px #ff00ff, 0 0 15px #ffffff; }
   100% { color: #ff00ff; text-shadow: 0 0 5px #ff00ff, 0 0 10px #ffffff, 0 0 15px #ff00ff; }
 }
+
