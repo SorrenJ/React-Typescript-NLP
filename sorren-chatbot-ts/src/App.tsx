@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './SorrenChatbot.css';
+import './SorrenChatbot.css';
 import './petals.css';
 import './navbar.css';
 import logo from './logo.svg';
