@@ -4,6 +4,8 @@ import './SorrenChatbot.css';
 import './SorrenChatbot.css';
 import './petals.css';
 import './navbar.css';
+import Spinner from './helpers/spinner';
+
 import logo from './logo.svg';
 
 import ApiComponent from './api/apiClient';
@@ -11,9 +13,10 @@ import ApiComponent from './api/apiClient';
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 
 interface Message {
-  sender: 'user' | 'sorren';
+  sender: 'user' | 'sorren' | 'bot';
   text: string;
   fontSize?: string;
+  text2?: string;
 }
 
 function SorrenChatbot() {
@@ -63,16 +66,32 @@ function SorrenChatbot() {
     return () => clearTimeout(loadingTimeout);
   }, []);
 
-   // Calculate font size based on character length
-   const getDynamicFontSize = (text: string) => {
+  const getDynamicFontSize = (text: string) => {
     const baseSize = 2; // Base font size for adjustments
     let fontSize;
-    if (text.length > 150) fontSize = `${baseSize - 0.4}rem`; // Smaller font for long text
-    else if (text.length > 100) fontSize = `${baseSize - 0.2}rem`; // Medium for mid-length text
-    else fontSize = `${baseSize}rem`; // Regular font for short text
-    
+  
+    // Check screen width
+    const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+  
+    if (isSmallScreen) {
+      fontSize = '1em'; // Default font size for small screens
+    } else {
+      // Dynamic font size for larger screens
+      if (text.length > 150) fontSize = `${baseSize - 0.4}rem`; // Smaller font for long text
+      else if (text.length > 100) fontSize = `${baseSize - 0.2}rem`; // Medium for mid-length text
+      else fontSize = `${baseSize}rem`; // Regular font for short text
+    }
+  
     console.log(`Text: "${text}" | Length: ${text.length} | Font Size: ${fontSize}`);
     return fontSize;
+  };
+  
+
+  const renderMessage = (message: Message) => {
+    if (message.text2 === 'spinner') {
+      return <Spinner />;
+    }
+    return <div style={{ fontSize: message.fontSize }}>{message.text}</div>;
   };
 
 
@@ -121,20 +140,41 @@ function SorrenChatbot() {
 
   const handleUserMessage = async () => {
     if (!userInput.trim()) return;
-
+  
     const userMessage: Message = { sender: 'user', text: userInput, fontSize: getDynamicFontSize(userInput) };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
-
+  
+    // Set a loading message with a timeout
+    const loadingMessage: Message = { sender: 'bot', text: 'Hmm... let me think... gimmie a sec... ', text2:'spinner', fontSize: getDynamicFontSize('Loading...') };
+    const loadingTimeout = setTimeout(() => {
+      setMessages((prevMessages) => [...prevMessages, loadingMessage]);
+    }, 500); // Show loading message after 500ms
+  
     try {
       const response = await axios.post<{ response: string }>(`${API_BASE_URL}/api/generate-response`, { input: userInput });
+      
+      // Clear the timeout and remove the loading message if it's already displayed
+      clearTimeout(loadingTimeout);
+      setMessages((prevMessages) =>
+        prevMessages.filter((message) => message.text2 !== 'spinner')
+      );
+  
       simulateTyping(response.data.response);
     } catch (error) {
       console.error("Error fetching response:", error);
+  
+      // Clear the timeout and remove the loading message if it's already displayed
+      clearTimeout(loadingTimeout);
+      setMessages((prevMessages) =>
+        prevMessages.filter((message) => message.text2 !== 'spinner')
+      );
+  
       simulateTyping("I'm having trouble responding right now. Please try again later.");
     }
-
+  
     setUserInput('');
   };
+  
 
   if (loading) {
     // Render loading screen while the page is loading

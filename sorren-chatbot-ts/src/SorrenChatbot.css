@@ -1,18 +1,17 @@
 /* Global styling */
 
-/* mobile view */
-@media (max-width: 768px) {
 
-  .bot-profile-pic {
-    display:none;
-    }
-    .user-message,
-    .bot-message {
-    font-size:0.5em;
-    }
+html{
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-  }
 
+.chat-container{
+  max-width: 100%;
+  overflow-x: hidden;
+  max-width: 100vw; overflow-x: hidden; 
+}
 .loading-screen {
   position: fixed;
   top: 0;
@@ -63,7 +62,7 @@ body {
 .chat-container {
   max-width: 80%;
   margin: auto;
-  padding: 50px;
+  padding-top: 50px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -261,7 +260,28 @@ button:hover {
   z-index:-2;
 }
 
+/* mobile view */
+@media (max-width: 768px) {
 
+
+
+
+
+/* Chat Container */
+.chat-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+  .bot-profile-pic {
+    display:none;
+    }
+    .user-message,
+    .bot-message {
+    font-size:0.5em;
+    }
+
+  }
 /* Styling for different screen sizes */
 @media (min-width: 768px) {
  /* Profile image for bot messages */
