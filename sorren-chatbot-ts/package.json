@@ -19,6 +19,7 @@
     "openai": "^4.71.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-gtm-module": "^2.0.11",
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
     "sentiment": "^5.0.2",
@@ -51,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-gtm-module": "^2.0.4",
     "@types/sentiment": "^5.0.4"
   },
   "proxy": "http://localhost:5000"

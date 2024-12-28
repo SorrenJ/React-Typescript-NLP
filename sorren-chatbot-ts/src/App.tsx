@@ -10,6 +10,7 @@ import logo from './logo.svg';
 
 import ApiComponent from './api/apiClient';
 
+
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 
 interface Message {
@@ -187,7 +188,9 @@ function SorrenChatbot() {
   }
 
   return (
+    
     <div className="chat-container">
+    
           <div id="petals">
             <i></i>
             <i></i>
