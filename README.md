@@ -4,18 +4,16 @@
 
 ## backend server 
 
-`cd React-Typescript-NLP/sorren-chatbot-ts/server`
+`cd sorren-chatbot-ts/server`
 
 `npm install`
 
-`npm start`
+`node index.js`
 
 ## frontend server
 
-`cd React-Typescript-NLP/sorren-chatbot-ts`
+`cd sorren-chatbot-ts`
 
 `npm install`
-
-
 
 `npm start`
