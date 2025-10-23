@@ -6,7 +6,7 @@ import './petals.css';
 import './navbar.css';
 import Spinner from './helpers/spinner';
 
-import logo from './logo.svg';
+import logo from './assets/home.svg';
 
 import ApiComponent from './api/apiClient';
 

@@ -18,7 +18,7 @@ html{
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #000000;
+ background-color: #f3819d;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,7 +48,7 @@ html{
 }
 
 body {
-  background-color: #150015;
+  background-color: #f3819d;
   color: #fff;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -96,10 +96,10 @@ h1 {
 input[type="text"] {
   flex: 1;
   padding: 10px;
-  background-color: #222;
-  color: #fff;
-  border: 1px solid #555;
-  border-radius: 5px 0 0 5px;
+  background-color: #eeadc7;
+  color: #0a0a0a;
+  border: 1px solid #ffffff00; 
+  border-radius: 5px; 
   width: 600px;
   outline: none;
 }
@@ -108,8 +108,8 @@ input[type="text"] {
 button[type="submit"] {
   padding: 10px;
   border: none;
-  background-color: #333;
-  color: white;
+  background-color: #eeadc7;
+  color: rgb(12, 12, 12);
   cursor: pointer;
   border-radius: 0 5px 5px 0;
   height: 100%; /* Ensure the button height matches the input */
@@ -117,13 +117,14 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #555;
+  filter: drop-shadow(0 0 25px white);
+  animation: flicker 1.5s infinite;
 }
 
 /* Standard button styling */
 button {
-  background-color: #444;
-  color: #fff;
+  background-color: #eeadc7;
+  color: #000000;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -132,7 +133,7 @@ button {
 }
 
 button:hover {
-  background-color: #555;
+  background-color: #eeadc7;
   transition: background-color 0.3s;
   filter: drop-shadow(0 0 25px white);
   animation: flicker 1.5s infinite;
@@ -140,11 +141,11 @@ button:hover {
 
 /* Styling for different sections of prompts */
 .prompts button {
-  background-color: #444;
+  background-color: #eeadc7;
 }
 
 .project-prompts button {
-  background-color: #555;
+  background-color: #eeadc7;
 }
 
 .chat-container {
@@ -193,24 +194,26 @@ button:hover {
   display: inline-block;
   padding: 10px 18px;
   position: relative;
-  margin: 10px;
+  margin: 35px;
   max-width: 80%;
-
-  background-color: #2c2c2d;
-  color: #fff;
+  /* border: 1px solid black; */
+  background-color: #fdddf3;
+  color: #020202;
 }
 
 .bot-message:before {
-
-  content: "\00a0";
-  display: block;
-  height: 16px;
-  width: 9px;
-  position: absolute;
-  bottom: -7.5px;
-  background-color:#2c2c2d;
-  left: 10px;
-  -webkit-transform: rotate(70deg) skew(5deg);
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+           
+           border-bottom-left-radius: 15px;
+            border-top: 20px solid transparent;
+            /* border-bottom: 20px solid transparent; */
+            border-right: 40px solid #fdddf3;
 
 }
 
@@ -222,8 +225,8 @@ button:hover {
   position: relative;
   margin: 10px;
   max-width: 80%;
-  background-color: #9f0095;
-  color: #fff;
+  background-color: #eeadc7;
+  color: #000000;
   float: right;
   margin-right: 55px;
 }
@@ -236,27 +239,27 @@ button:hover {
   width: 9px;
   position: absolute;
   bottom: -7.5px;
-  background-color: #9f0095;
+  background-color: #eeadc7;
     right: 10px;
     -webkit-transform: rotate(118deg) skew(-5deg);
 }
 
 
 .bot-profile-pic {
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: 150px;
   /* background-color: grey; */
   border-radius: 50%;
-  background-image: url('assets/MeditatingProfile1.PNG'); /* Replace with the actual path */
+  background-image: url('assets/sjao-anime-1-reverse.gif'); /* Replace with the actual path */
   background-size: cover;
   background-position: center;
-  margin-right: 10px;
+  margin-right: 8px;
   flex-shrink: 0;
-  filter: drop-shadow(0 0 30px #e606c8);
+  /* filter: drop-shadow(0 0 30px #e606c8); */
   animation: holographicGradient 1s infinite;
-  margin-left: -75px;
+  margin-left: -120px;
   position: absolute;
-  margin-top: 5%;
+  margin-top: 15px;
   z-index:-2;
 }
 
